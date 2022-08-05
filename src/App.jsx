@@ -1,8 +1,9 @@
 import './App.css';
+import { supabase } from './utils/supabase';
 
 const App = () => {
 	
-	console.log(process.env.REACT_APP_SUPABASE_URL)
+	console.log(supabase)
 	return (
 		<div>Hello world</div>
 	);
