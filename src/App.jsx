@@ -1,48 +1,47 @@
 import './App.css';
-import { supabase } from './utils/supabase';
+import { useState, useEffect } from "react";
 import {
   Routes,
   Route,
   useNavigate,
   Navigate,
 } from "react-router-dom";
-import Landing from './pages/Landing/Landing';
-import Login from './pages/Login/Login';
-import Signup from './pages/Signup/Signup';
-import Navbar from './components/Navbar/Navbar';
+import AuthPage from './pages/AuthPage/AuthPage';
+
+import ProfileCompletePage from './pages/ProfileCompletePage/ProfileCompletePage';
+import LandingPage from './pages/LandingPage/LandingPage';
+import SignupForm from './components/SignupForm/SignupForm';
+import LoginForm from './components/LoginForm/LoginForm';
+import NavBar from './components/Navbar/Navbar';
+import { logout } from '../src/utils/Auth'
+import { getUser } from '../src/utils/users-service';
+
 
 const App = () => {
-	
-	// console.log(supabase)
 
-	
+  const [user, setUser] = useState(getUser());
 
-	return (
-		<>
-		<Navbar />
-		<Routes>
-			<Route
-				path='/'
-				element={
-					<Landing />
-				}
-			/>
-			<Route
-				path='/login'
-				element={
-					<Login />
-				}
-			/>
-			<Route
-				path='/signup'
-				element={
-					<Signup />
-				}
-			/>
-		</Routes>
-			
-		</>
-	);
+  const navigate = useNavigate();
+  return (
+    <main className="App">
+      {user ?
+        <>
+
+        </>
+        :
+        <>
+          <NavBar user={user} setUser={setUser} />
+          <Routes>
+            <Route path='/' element={<LandingPage setUser={setUser} /> }/>
+            <Route path='/sign-up-free' element={ <AuthPage setUser={setUser} /> } />
+            <Route path="/signup" element={ <SignupForm setUser={setUser} userState={user} /> } />
+            <Route path="/login" element={ <LoginForm setUser={setUser} userState={user} /> } />
+            <Route path='/profile-complete' element={<ProfileCompletePage /> }/>
+          </Routes>
+        </>
+      }
+    </main>
+  );
 }
 
 export default App;
