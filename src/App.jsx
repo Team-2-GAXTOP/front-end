@@ -15,6 +15,7 @@ import LoginForm from './components/LoginForm/LoginForm';
 import NavBar from './components/Navbar/Navbar';
 import { logout } from '../src/utils/Auth'
 import { getUser } from '../src/utils/users-service';
+import SearchOptions from './pages/SearchOptions/SearchOptions';
 
 
 const App = () => {
@@ -37,6 +38,7 @@ const App = () => {
             <Route path="/signup" element={ <SignupForm setUser={setUser} userState={user} /> } />
             <Route path="/login" element={ <LoginForm setUser={setUser} userState={user} /> } />
             <Route path='/profile-complete' element={<ProfileCompletePage /> }/>
+            <Route path='/search-options' element={<SearchOptions /> }/>
           </Routes>
         </>
       }
