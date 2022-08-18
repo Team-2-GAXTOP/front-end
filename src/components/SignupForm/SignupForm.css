@@ -1,0 +1,42 @@
+.sign-up-input-container {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.signin {
+  text-decoration: none;
+  font-weight: bold;
+  color: #0050a3 !important;
+}
+.sign-up-button {
+  background-color: white;
+    border: none;
+    border-radius: 15px;
+    color: black;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.have-account {
+  font-size: 14px;
+  text-align: center;
+  padding-top: 10px;
+  color: black;
+}
+
+.sign-up-form-container {
+  display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25vmin;
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
