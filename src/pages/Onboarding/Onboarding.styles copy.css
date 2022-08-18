@@ -1,0 +1,52 @@
+.wrapperPager {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 40px;
+}
+
+.nextBtnsDiv {
+  width: 80%;
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  justify-content: space-between;
+}
+
+.leftBtn {
+  width: 75px;
+  height: 42.34px;
+  border-radius: 10px;
+  background-color: #666666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .rightBtn {
+  width: 75px;
+  height: 42.34px;
+  border-radius: 10px;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.paginationOnboarding {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 20px;
+}

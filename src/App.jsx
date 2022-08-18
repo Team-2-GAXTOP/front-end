@@ -6,8 +6,10 @@ import {
   useNavigate,
   Navigate,
 } from "react-router-dom";
-import AuthPage from './pages/AuthPage/AuthPage';
 
+import AuthPage from './pages/AuthPage/AuthPage';
+import OnboardingPage from './pages/Onboarding/OnboardingPage';
+import OnboardingStepForm from './pages/OnboardingStepForm/OnboardingStepForm';
 import ProfileCompletePage from './pages/ProfileCompletePage/ProfileCompletePage';
 import LandingPage from './pages/LandingPage/LandingPage';
 import SignupForm from './components/SignupForm/SignupForm';
@@ -15,6 +17,7 @@ import LoginForm from './components/LoginForm/LoginForm';
 import NavBar from './components/Navbar/Navbar';
 import { logout } from '../src/utils/Auth'
 import { getUser } from '../src/utils/users-service';
+
 
 
 const App = () => {
@@ -26,7 +29,7 @@ const App = () => {
     <main className="App">
       {user ?
         <>
-
+				
         </>
         :
         <>
@@ -37,6 +40,7 @@ const App = () => {
             <Route path="/signup" element={ <SignupForm setUser={setUser} userState={user} /> } />
             <Route path="/login" element={ <LoginForm setUser={setUser} userState={user} /> } />
             <Route path='/profile-complete' element={<ProfileCompletePage /> }/>
+						<Route path='/onboarding' element={<OnboardingPage />} />
           </Routes>
         </>
       }
