@@ -10,7 +10,9 @@ import Landing from './pages/Landing/Landing';
 import Login from './pages/Login/Login';
 import Signup from './pages/Signup/Signup';
 import Navbar from './components/Navbar/Navbar';
-import Onboarding from './pages/Onboarding/Onboarding';
+import OnboardingPage from './pages/Onboarding/OnboardingPage';
+import OnboardingStepForm from './pages/OnboardingStepForm/OnboardingStepForm';
+
 
 const App = () => {
 	
@@ -20,7 +22,7 @@ const App = () => {
 
 	return (
 		<>
-		<Navbar />
+		{/* <Navbar /> */}
 		<Routes>
 			<Route
 				path='/'
@@ -43,7 +45,7 @@ const App = () => {
 			<Route
 				path='/onboarding'
 				element={
-					<Onboarding />
+					<OnboardingPage />
 				}
 			/>
 		</Routes>

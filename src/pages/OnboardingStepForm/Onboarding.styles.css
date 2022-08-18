@@ -27,17 +27,9 @@
   align-items: center;
 }
 
-.rightBtn {
-  width: 75px;
-  height: 42.34px;
-  border-radius: 10px;
-  background-color: #666666;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .paginationOnboarding {
-  position: absolute;
-  bottom: 20px;
+  position: fixed;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
