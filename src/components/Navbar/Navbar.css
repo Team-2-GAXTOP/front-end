@@ -1,5 +1,5 @@
 
-#login-btn, #logout-btn{
+#login-btn, #logout-btn, #resource-btn{
     background-color: white; 
     border: none;
     border-radius: 15px;
@@ -14,4 +14,22 @@
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+
+  nav {
+    display: block;
+    padding: 1px;
+    background-color: #1469bd;
+  }
+
+  ul {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(32, 95, 197)
+  }
+
+  li {
+    float: right;
   }

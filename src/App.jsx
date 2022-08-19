@@ -13,6 +13,7 @@ import LandingPage from './pages/LandingPage/LandingPage';
 import SignupForm from './components/SignupForm/SignupForm';
 import LoginForm from './components/LoginForm/LoginForm';
 import NavBar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 import { logout } from '../src/utils/Auth'
 import { getUser } from '../src/utils/users-service';
 import SearchOptions from './pages/SearchOptions/SearchOptions';
@@ -40,6 +41,7 @@ const App = () => {
             <Route path='/profile-complete' element={<ProfileCompletePage /> }/>
             <Route path='/search-options' element={<SearchOptions /> }/>
           </Routes>
+          <Footer/>
         </>
       }
     </main>

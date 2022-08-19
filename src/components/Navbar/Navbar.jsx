@@ -12,12 +12,20 @@ const Navbar = ({ user, setUser }) => {
   }
 
   return (
-    <nav style={{ marginLeft: '50%', width: '50%', display: 'grid', justifyContent: 'space-around', gridTemplateColumns: '1fr 1fr 1fr' }}>
-       <Logo />
-        <button type="button" id="login-btn"><Link to="/login" style={{ textDecoration: 'none', color:'black', textAlign:'center', fontWeight:'bold'}}>Login</Link></button>
-         <button type="button" id="logout-btn">
-          <Link to="" onClick={handleLogOut} style={{ textDecoration: 'none', color: 'black', textAlign: 'center' }}>Log Out</Link>
-        </button>
+    <nav>
+      <ul>
+        <li><Logo /></li>
+        <li id="resource-btn">
+          <select>
+            <option value="resources">Resources</option>
+            <option value="others">others</option>
+          </select>
+        </li>
+        <li><button type="button" id="login-btn">
+          <Link to="" onClick={handleLogOut} style={{ textDecoration: 'none', color: 'black', textAlign: 'center' }}>LOG IN</Link>
+        </button></li>
+        {/* <li><button type="button" id="login-btn"><Link to="/login" style={{ textDecoration: 'none', color:'black', textAlign:'center', fontWeight:'bold'}}>Login</Link></button></li> */}
+        </ul>
     </nav>
   )
 }

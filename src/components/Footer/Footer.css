@@ -1,0 +1,21 @@
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: blue;
+    color: white;
+    text-align: center;
+} 
+
+
+
+#social-icon {
+    text-align: center;
+    padding: 20px;
+    float: left;
+}
+
+a {
+    padding: 10px;
+}
