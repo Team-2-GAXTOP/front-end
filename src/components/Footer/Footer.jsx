@@ -20,7 +20,6 @@ const Footer = ({ user, setUser }) => {
         <li><button type="button" id="contact-btn">
           <Link to="" onClick={handleLogOut} style={{ textDecoration: 'none', color: 'black', textAlign: 'center' }}>Contact</Link>
         </button></li>
-       
         <div id="social-icon">
             <a><SocialIcon url="https://twitter.com/generalassembly" /></a>
             <a><SocialIcon url="https://linkedin.com/school/generalassembly" /></a>
