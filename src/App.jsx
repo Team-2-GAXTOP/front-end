@@ -17,6 +17,7 @@ import LoginForm from './components/LoginForm/LoginForm';
 import NavBar from './components/Navbar/Navbar';
 import { logout } from '../src/utils/Auth'
 import { getUser } from '../src/utils/users-service';
+import Account from './pages/Account/Account';
 
 
 
@@ -29,12 +30,15 @@ const App = () => {
     <main className="App">
       {user ?
         <>
-				
+          {/* <Routes>
+            <Route path='/account' element={<Account userState={user} />} ></Route>
+          </Routes> */}
         </>
         :
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
+            <Route path='/account' element={<Account userState={user} />} ></Route>
             <Route path='/' element={<LandingPage setUser={setUser} /> }/>
             <Route path='/sign-up-free' element={ <AuthPage setUser={setUser} /> } />
             <Route path="/signup" element={ <SignupForm setUser={setUser} userState={user} /> } />
