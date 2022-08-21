@@ -1,0 +1,38 @@
+.mid-card {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+    
+.mid-card-wrapper {
+    position: relative;
+    height: 50vh;
+    width: 90%;
+    left: 5rem;
+    display: flex;
+    justify-content: center;
+    border: .2rem solid #E6E6E6;
+    border-left: none;
+    border-right: none;
+    
+}
+.mid-h1 {
+    position: absolute;
+    text-align: center;
+    top: 1rem;
+    padding-bottom: 5rem;
+}
+    
+.mid-card-h2 {
+        font-weight: bold;
+    
+}
+.mid-cards {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 5rem;
+}
