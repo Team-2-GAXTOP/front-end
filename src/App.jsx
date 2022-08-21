@@ -24,7 +24,8 @@ import Account from './pages/Account/Account';
 const App = () => {
 
   const [user, setUser] = useState(getUser());
-
+  
+  // nav
   const navigate = useNavigate();
   return (
     <main className="App">
