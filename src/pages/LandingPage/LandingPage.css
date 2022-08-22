@@ -7,16 +7,25 @@
     left: 50%;
     transform: translate(-50%, -50%);
 } */
-
+/* .landing-main-div{
+    
+    height: 100vh;
+    width: 100vw;
+}
 p {
     font-size: larger;
     text-align:center;
     left:25%;
+} */
+* {
+    box-sizing: border-box;
 }
+::-webkit-scrollbar{
+    display: none;
+  }
 
-
-#clickToKnow-btn {
-    background-color: white; /* Green */
+/* #clickToKnow-btn {
+    background-color: white;
     border: none;
     border-radius: 15px;
     color: black;
@@ -26,8 +35,9 @@ p {
     display: inline-block;
     font-size: 16px;
     cursor: pointer;
-    -webkit-transition-duration: 0.4s; /* Safari */
+    -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  }
+  } */
+
 
