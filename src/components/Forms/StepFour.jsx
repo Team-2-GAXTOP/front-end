@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 
-const StepFour = ({  nextStep, handleFormData, prevStep, values }) => {
+const StepFour = ({  nextStep, handleFormData, prevStep, values, user, setUser }) => {
   
   const submitFormData = (e) => {
     e.preventDefault()

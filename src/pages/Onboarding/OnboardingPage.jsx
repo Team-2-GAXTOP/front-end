@@ -2,7 +2,7 @@ import OnboardingStepForm from "../OnboardingStepForm/OnboardingStepForm"
 import { useState } from "react"
 
 
-const OnboardingPage = () => {
+const OnboardingPage = ({ user, setUser }) => {
 
 
   // state for steps 
@@ -20,7 +20,7 @@ const OnboardingPage = () => {
 
   return (
     <div className="wrapperPage">
-      <OnboardingStepForm nextStep={nextStep} prevStep={prevStep} step={step} />
+      <OnboardingStepForm nextStep={nextStep} prevStep={prevStep} step={step}  user ={user} setUSer={setUser}  />
       <div className="paginationOnboarding">
         <p>Question {step} of 5</p>
       </div>
