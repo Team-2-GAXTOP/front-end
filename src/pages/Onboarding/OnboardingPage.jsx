@@ -24,7 +24,7 @@ const OnboardingPage = () => {
       <div className="paginationOnboarding">
         <p>Question {step} of 5</p>
       </div>
-    </div>
+    </div> 
   )
 }
 
