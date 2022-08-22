@@ -1,6 +1,6 @@
 import {motion} from "framer-motion"
 
-const Final = ({ values }) => {
+const Final = ({ values, user, setUser }) => {
  
   const { zipcode, applyingAs, orgName, address, size, prevApplied, teamOfWriters, grantAmount, whyTextArea } = values
   

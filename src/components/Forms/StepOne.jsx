@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import './Form.styles.css'
 
-const StepOne = ({ nextStep, handleFormData, values }) => {
+const StepOne = ({ nextStep, handleFormData, values, user, setUser }) => {
 
   // const [error, setError] = useState(false)
 

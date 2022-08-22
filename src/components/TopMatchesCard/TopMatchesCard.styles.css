@@ -1,0 +1,63 @@
+.topMatchesCard {
+  position: relative;
+  min-height: 180px;
+  border: 1px solid black;
+  border-radius: 20px;
+  min-width: 300px;
+  padding: 20px;
+  margin-right: 35px;
+}
+
+.topMatchesCardDashed {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  min-height: 180px;
+  border: 1px dashed black;
+  border-radius: 20px;
+  min-width: 300px;
+  padding: 20px;
+  margin-right: 10px;
+}
+
+.topMatchesCardTop {
+  display: flex;
+  flex-direction: row;
+}
+
+.viewBtn {
+  border: 1px solid black;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.placeholderImg {
+  width: auto;
+  height: 65px;
+  margin-right: 20px;
+}
+
+.imageHolder {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.passedInImage {
+  height: 30px;
+  width: auto;
+}
+
+.centerCardText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: absolute;
+}
+
+.cardTextSize {
+
+  font-size: 1rem;
+  word-wrap: normal;
+}

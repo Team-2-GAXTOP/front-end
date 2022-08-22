@@ -1,17 +1,50 @@
+#login-btn, #logout-btn, #resource-btn{
+  background-color: white; 
+  border: none;
+  border-radius: 15px;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  /* margin: 25px 25px 25px 45px; */
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
 
-#login-btn, #logout-btn{
-    background-color: white; 
-    border: none;
-    border-radius: 15px;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 25px 25px 25px 45px;
-    cursor: pointer;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  }
+.jh {
+   /* display: block;  */
+  /* padding: 1px;
+  background-color: #1469bd;
+  position: sticky;
+display: 'grid';
+justify-content: 'space-evenly';
+grid-template-columns: '1fr 1fr 1fr' */
+
+    display: grid;
+    padding: 1px;
+    background-color: #1469bd;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: sticky;
+    justify-content: 'space-around';
+}
+
+ul {
+  list-style-type:none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(32, 95, 197)
+}
+
+li {
+  float: right;
+}
+
+.highlight {
+ border-color: white;
+ color: aliceblue;
+}

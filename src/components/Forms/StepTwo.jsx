@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 
-const StepTwo = ({ nextStep, handleFormData, prevStep, values }) => {
+const StepTwo = ({ nextStep, handleFormData, prevStep, values, user, setUser }) => {
 
   const submitFormData = (e) => {
     e.preventDefault()

@@ -8,7 +8,7 @@ import StepThree from "../../components/Forms/StepThree"
 import StepFour from "../../components/Forms/StepFour"
 import StepFive from "../../components/Forms/StepFive"
 
-const OnboardingStepForm = ({ nextStep, prevStep, step }) => {
+const OnboardingStepForm = ({ nextStep, prevStep, step , user, setUser }) => {
 
   const [formData, setFormData] = useState({
     zipcode: '',
@@ -37,27 +37,27 @@ const OnboardingStepForm = ({ nextStep, prevStep, step }) => {
   switch (step) {
     case 1:
       return (
-        <StepOne nextStep={nextStep} handleFormData={handleInputData} values={formData} />
+        <StepOne nextStep={nextStep} handleFormData={handleInputData} values={formData} user ={user} setUSer={setUser} />
       )
     case 2: 
       return (
-        <StepTwo nextStep={nextStep} prevStep={prevStep} handleFormData={handleInputData} values={formData} />
+        <StepTwo nextStep={nextStep} prevStep={prevStep} handleFormData={handleInputData} values={formData} user ={user} setUSer={setUser} />
       )
     case 3: 
       return (
-        <StepThree nextStep={nextStep} prevStep={prevStep} handleFormData={handleInputData} values={formData} />
+        <StepThree nextStep={nextStep} prevStep={prevStep} handleFormData={handleInputData} values={formData} user ={user} setUSer={setUser} />
       )
     case 4:
       return (
-        <StepFour nextStep={nextStep} prevStep={prevStep} handleFormData={handleInputData} values={formData} />
+        <StepFour nextStep={nextStep} prevStep={prevStep} handleFormData={handleInputData} values={formData} user ={user} setUSer={setUser} />
       )
     case 5:
       return (
-        <StepFive nextStep={nextStep} prevStep={prevStep} handleFormData={handleInputData} values={formData} /> 
+        <StepFive nextStep={nextStep} prevStep={prevStep} handleFormData={handleInputData} values={formData} user ={user} setUSer={setUser} /> 
       )
     case 6:
       return (
-        <Final values={formData}/> 
+        <Final values={formData} user ={user} setUSer={setUser} /> 
       )
     default: 
       return (
