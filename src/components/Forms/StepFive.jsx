@@ -7,9 +7,9 @@ const StepFive = ({ nextStep, handleFormData, prevStep, values , user, setUser})
   const submitFormData = async (e) => {
     const { zip_code, applyingAs, orgName, address, size, prevApplied, teamOfWriters, grantAmount, whyTextArea } = values
     e.preventDefault()
-    const { data, error } = await supabase
-    .from('user_profile')
-    .insert([{ zipcode: zip_code, role: applyingAs, userID: user.id, amount: grantAmount }])
+    // const { data, error } = await supabase
+    // .from('user_profile')
+    // .insert([{ zipcode: zip_code, role: applyingAs, userID: user.id, amount: grantAmount }])
     nextStep()
   }
 
