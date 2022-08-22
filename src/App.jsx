@@ -28,7 +28,7 @@ const App = () => {
         <Routes>
         <Route path='/profile-complete' element={<ProfileCompletePage setUser={setUser} userState={user}/> }/>
         <Route path='/onboarding' element={<OnboardingPage setUser={setUser} userState={user}/>} />
-        <Route path='/account' element={<Account userState={user} />} ></Route>
+        <Route path='/account' element={<Account setUser={setUser} userState={user} />} />
         </Routes>
         <Footer/>
 

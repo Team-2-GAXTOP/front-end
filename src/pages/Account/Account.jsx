@@ -4,8 +4,8 @@ import SavedGrants from './images/savedGrants.png'
 import InProcess from './images/inProcess.png'
 import AppliedGrants from './images/appliedGrants.png'
 
-const Account = ({ userState }) => {
-  console.log(userState)
+const Account = ({ user, setUser }) => {
+  console.log(user)
   return (
     <div className='accountWrapper'>
       <h3>Welcome, Account name!</h3>

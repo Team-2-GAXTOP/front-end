@@ -22,7 +22,7 @@ const Navbar = ({ user, setUser }) => {
           <Logo />
           {user ?
             <div>
-              <FontAwesomeIcon icon={faUserCircle} size="2x" className="highlight" />
+              <Link to="/account" style={{ textDecoration: 'none', color: 'black', textAlign: 'center' }}><FontAwesomeIcon icon={faUserCircle} size="2x" className="highlight" /></Link>
               <FontAwesomeIcon icon={faBell} size="2x" className="highlight" />
             </div>
             :
