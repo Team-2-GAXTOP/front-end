@@ -1,6 +1,21 @@
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+} 
 
-#logo-btn {
-    background-color: white;
+
+
+.highlight {
+    border-color: white;
+    color: aliceblue;
+}
+
+
+ #resource-btn, #contact-btn {
+    background-color: white; 
     border: none;
     border-radius: 15px;
     color: black;
@@ -11,7 +26,13 @@
     font-size: 16px;
     /* margin: 25px 25px 25px 45px; */
     cursor: pointer;
-    -webkit-transition-duration: 0.4s; 
+    -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+
+
+  .main-div-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }

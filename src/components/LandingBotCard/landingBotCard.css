@@ -31,3 +31,7 @@ margin: 1rem;
 top: 0;
 float: top;
 }
+
+@media screen and (max-width: 480px) {
+    
+}

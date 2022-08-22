@@ -1,0 +1,30 @@
+.topMatchesSectionWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: 20px 0;
+}
+
+.accountWrapper {
+  padding: 80px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+}
+
+.rowWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.grantMatches {
+  border: 1px solid black;
+}
+
+.savedGrantsSectionWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin: 20px 0;
+}

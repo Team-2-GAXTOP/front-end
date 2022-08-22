@@ -36,3 +36,7 @@
         justify-content: space-around;
         padding: 5rem;
 }
+
+@media screen and (max-width: 480px) {
+    
+}
