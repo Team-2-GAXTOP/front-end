@@ -1,14 +1,16 @@
 import './Account.styles.css'
+import { useState } from "react";
 import TopMatchesCard from '../../components/TopMatchesCard/TopMatchesCard'
 import SavedGrants from './images/savedGrants.png'
 import InProcess from './images/inProcess.png'
 import AppliedGrants from './images/appliedGrants.png'
 
+
 const Account = ({ user, setUser }) => {
-  console.log(user)
+  console.log(user.user_metadata.first_name)
   return (
     <div className='accountWrapper'>
-      <h3>Welcome, Account name!</h3>
+      <h3>Welcome, {user.user_metadata.first_name}!</h3>
       <div>
         <button className='btn grantMatches'>View my grant matches</button>
       </div>

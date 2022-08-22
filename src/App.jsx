@@ -19,16 +19,16 @@ import Account from './pages/Account/Account';
 const App = () => {
 
   const [user, setUser] = useState(getUser());
-
+  console.log(user)
   return (
     <>
       {user ?
         <>
         <NavBar user={user} setUser={setUser} />
         <Routes>
-        <Route path='/profile-complete' element={<ProfileCompletePage setUser={setUser} userState={user}/> }/>
-        <Route path='/onboarding' element={<OnboardingPage setUser={setUser} userState={user}/>} />
-        <Route path='/account' element={<Account setUser={setUser} userState={user} />} />
+        <Route path='/profile-complete' element={<ProfileCompletePage user={user} setUser={setUser}/> }/>
+        <Route path='/onboarding' element={<OnboardingPage user={user} setUser={setUser}/>} />
+        <Route path='/account' element={<Account user={user} setUser={setUser}/>} />
         </Routes>
         <Footer/>
 
@@ -38,10 +38,10 @@ const App = () => {
           <NavBar user={user} setUser={setUser} />
           <main className="App">
           <Routes>
-            <Route path='/' element={<LandingPage setUser={setUser} /> }/>
-            <Route path='/sign-up-free' element={ <AuthPage setUser={setUser} /> } />
-            <Route path="/signup" element={ <SignupForm setUser={setUser} userState={user} /> } />
-            <Route path="/login" element={ <LoginForm setUser={setUser} userState={user} /> } />
+            <Route path='/' element={<LandingPage user={user} setUser={setUser}/> }/>
+            <Route path='/sign-up-free' element={ <AuthPage user={user} setUser={setUser} /> } />
+            <Route path="/signup" element={ <SignupForm user={user} setUser={setUser} /> } />
+            <Route path="/login" element={ <LoginForm user={user} setUser={setUser} /> } />
           </Routes>
           </main>
           <Footer/>
