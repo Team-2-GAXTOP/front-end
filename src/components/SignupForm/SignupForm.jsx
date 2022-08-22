@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./SignupForm.css";
 import  {signup}  from '../../utils/Auth'
 
@@ -25,7 +25,7 @@ const SignupForm = ({  user, setUser }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (password != passwordConf) {
+    if (password !== passwordConf) {
       return;
     }
     let { user, session, error } = await signup(firstName,lastName, email, password);
@@ -37,11 +37,7 @@ const SignupForm = ({  user, setUser }) => {
       navigate("/profile-complete");
     }
   };
-
-  const isFormInvalid = () => {
-    return !(firstName && firstName && email && password && password === passwordConf);
-  };
-
+  
   return (
     <form
       autoComplete="off"

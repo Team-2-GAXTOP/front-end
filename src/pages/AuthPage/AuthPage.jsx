@@ -12,7 +12,6 @@ const AuthPage = ({ user, setUser }) => {
 
   return (
     <>
-     
       <div className='login-main-div'>
         <div className='signup-div'>
           <button type="button" id="signup-btn" onClick={goToSignUp}>Sign up for free</button>

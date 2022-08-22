@@ -5,6 +5,7 @@ const LandingPage = ({ user, setUser }) => {
 
   return (
     <>
+    
     <div className='landing-main-div'>
       <div className='text-div'>
         We make finding grants easy!

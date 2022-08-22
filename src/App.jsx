@@ -1,55 +1,53 @@
 import './App.css';
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   Routes,
   Route,
-  useNavigate,
-  Navigate,
 } from "react-router-dom";
 
 import AuthPage from './pages/AuthPage/AuthPage';
 import OnboardingPage from './pages/Onboarding/OnboardingPage';
-import OnboardingStepForm from './pages/OnboardingStepForm/OnboardingStepForm';
 import ProfileCompletePage from './pages/ProfileCompletePage/ProfileCompletePage';
 import LandingPage from './pages/LandingPage/LandingPage';
 import SignupForm from './components/SignupForm/SignupForm';
 import LoginForm from './components/LoginForm/LoginForm';
 import NavBar from './components/Navbar/Navbar';
-import { logout } from '../src/utils/Auth'
+import Footer from './components/Footer/Footer';
 import { getUser } from '../src/utils/users-service';
 import Account from './pages/Account/Account';
-
-
 
 const App = () => {
 
   const [user, setUser] = useState(getUser());
-  
-  // nav
-  const navigate = useNavigate();
+
   return (
-    <main className="App">
+    <>
       {user ?
         <>
-          {/* <Routes>
-            <Route path='/account' element={<Account userState={user} />} ></Route>
-          </Routes> */}
+        <NavBar user={user} setUser={setUser} />
+        <Routes>
+        <Route path='/profile-complete' element={<ProfileCompletePage setUser={setUser} userState={user}/> }/>
+        <Route path='/onboarding' element={<OnboardingPage setUser={setUser} userState={user}/>} />
+        <Route path='/account' element={<Account userState={user} />} ></Route>
+        </Routes>
+        <Footer/>
+
         </>
         :
         <>
           <NavBar user={user} setUser={setUser} />
+          <main className="App">
           <Routes>
-            <Route path='/account' element={<Account userState={user} />} ></Route>
             <Route path='/' element={<LandingPage setUser={setUser} /> }/>
             <Route path='/sign-up-free' element={ <AuthPage setUser={setUser} /> } />
             <Route path="/signup" element={ <SignupForm setUser={setUser} userState={user} /> } />
             <Route path="/login" element={ <LoginForm setUser={setUser} userState={user} /> } />
-            <Route path='/profile-complete' element={<ProfileCompletePage /> }/>
-						<Route path='/onboarding' element={<OnboardingPage />} />
           </Routes>
+          </main>
+          <Footer/>
         </>
       }
-    </main>
+    </>
   );
 }
 

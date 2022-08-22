@@ -1,25 +1,25 @@
 // import './ProfileCompletePage.css';
-import  {getSession}  from '../../utils/Auth'
+
+import { useNavigate } from "react-router-dom";
 
 const ProfileCompletePage = ({ user, setUser }) => {
+  const navigate = useNavigate();
 
-
-  const getUserDetail = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-     console.log(getSession);
+    navigate("/onboarding");
   }
-
 
   return (
     <>
       <div className='clap-image-div'>
-        <img src={require("../../utils/images/hand.png")}></img>
+        <img src={require("../../utils/images/hand.png")} alt=""></img>
       </div>
       <div className='text-div'>
         <p>PROFILE:  Complete!</p>
         <p>Congratulations your profile is 100% complete. </p>
       </div>
-      <form onSubmit={getUserDetail}><button type="submit" id="signin-btn" onClick={getUserDetail}>SignIn</button></form>
+      <form onSubmit={handleSubmit}><button type="submit" id="signin-btn">Next</button></form>
     </>
   )
 }
