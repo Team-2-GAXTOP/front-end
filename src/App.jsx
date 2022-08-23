@@ -15,6 +15,7 @@ import NavBar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import { getUser } from '../src/utils/users-service';
 import Account from './pages/Account/Account';
+import ResultPage from './pages/ResultPage/ResultPage';
 
 const App = () => {
 
@@ -29,6 +30,7 @@ const App = () => {
         <Route path='/profile-complete' element={<ProfileCompletePage user={user} setUser={setUser}/> }/>
         <Route path='/onboarding' element={<OnboardingPage user={user} setUser={setUser}/>} />
         <Route path='/account' element={<Account user={user} setUser={setUser}/>} />
+        <Route path='/results' element={<ResultPage user={user} setUser={setUser}/>} />
         </Routes>
         <Footer/>
 
