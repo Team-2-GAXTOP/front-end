@@ -21,7 +21,7 @@ const Login = ({ user, setUser }) => {
     let { user, session, error } = await login (formDetail.email, formDetail.password);
     setUser(user);
     console.log("blah"+session.access_token);
-    navigate("/profile-complete"); //Change later
+    navigate("/profile-complete"); 
   };
 
   return (
@@ -40,12 +40,12 @@ const Login = ({ user, setUser }) => {
         <br />
         <div className='lineDivider'></div>
 
-        <p style={{marginBottom: "40px"}}>or</p>
+        <p style={{marginBottom: "40px", marginTop:"40px", fontSize: "10px"}}>Or</p>
 
         {/* this needs an on click event */}
         <div className='googleBtn'>
           <div>
-            <img style={{ width: "20px", marginRight: "10px" }} src={googleIcon} alt='google button' />
+            <img style={{ width: "20px", marginRight: "12px" }} src={googleIcon} alt='google button' />
           </div>
         
           <div>
