@@ -20,8 +20,7 @@ const Login = ({ user, setUser }) => {
     e.preventDefault();
     let { user, session, error } = await login (formDetail.email, formDetail.password);
     setUser(user);
-    console.log("blah"+session.access_token);
-    navigate("/profile-complete"); 
+    navigate("/account");
   };
 
   return (
