@@ -30,9 +30,9 @@ const App = () => {
           {/* <NavBar user={user} setUser={setUser} /> */}
         <NewNavbar user={user} setUser={setUser} />
         <Routes>
-        <Route path='/profile-complete' element={<ProfileCompletePage user={user} setUser={setUser}/> }/>
-        <Route path='/onboarding' element={<OnboardingPage user={user} setUser={setUser}/>} />
-        <Route path='/account' element={<Account user={user} setUser={setUser}/>} />
+          <Route path='/profile-complete' element={<ProfileCompletePage user={user} setUser={setUser}/> }/>
+          <Route path='/onboarding' element={<OnboardingPage user={user} setUser={setUser}/>} />
+          <Route path='/account' element={<Account user={user} setUser={setUser}/>} />
         </Routes>
         <NewFooter/>
 
@@ -41,7 +41,8 @@ const App = () => {
         <>
           <NewNavbar user={user} setUser={setUser} />
           <main className="App">
-          <Routes>
+            <Routes>
+            <Route path='/profile-complete' element={<ProfileCompletePage user={user} setUser={setUser}/> }/>
             <Route path='/' element={<LandingPage user={user} setUser={setUser}/> }/>
             <Route path='/sign-up-free' element={ <AuthPage user={user} setUser={setUser} /> } />
             <Route path="/signup" element={ <SignupForm user={user} setUser={setUser} /> } />
