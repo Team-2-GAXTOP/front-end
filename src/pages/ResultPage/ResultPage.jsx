@@ -1,39 +1,56 @@
 // import './ProfileCompletePage.css';
+import { useState , useEffect} from "react"
 
 import { useNavigate } from "react-router-dom";
 import {supabase} from "../../utils/supabase";
+import ResultCard from '../../components/ResultCard/ResultCard'
+
+
+import ToggleButton from 'react-toggle-button'
+
 
 const ResultPage = ({ user, setUser }) => {
   const navigate = useNavigate();
+  
+  const [isBusy, setBusy] = useState(true)
+  const [resultData, setResultData] = useState([]);
 
-  const getResultData = async (e) => {
-    e.preventDefault()
-
+  useEffect(function () {
+    async function getResultData() {
+      const {data:questions, err}  = await supabase
+      .from('user_profile')
+      .select('*')
+      .eq('userID', user.id);
+      console.log(questions)
    
-    const {data:questions, err}  = await supabase
-    .from('user_profile')
-    .select('*')
-    .eq('userID', user.id);
-    console.log(questions)
- 
-    const zipcode = questions[0].zipcode;
-    const role = questions[0].role;
-    const amount = questions[0].amount;
-    console.log (role + " " + amount )
-    
-    const { data, error } = await supabase
-    .from('grants')
-    .select('*')
-    .match({ eligibility: role, amount: amount });
-    console.log(data)
-  }
+      const zipcode = questions[0].zipcode;
+      const role = questions[0].role;
+      const amount = questions[0].amount;
+      console.log (role + " " + amount )
+      
+      const { data, error } = await supabase
+      .from('grants')
+      .select('*')
+      .match({ eligibility: role })
+
+        setBusy(false);
+        setResultData(data);
+    }
+    getResultData();
+}, []);
+
 
 
   return (
     <>
       <div>
-      <form onSubmit={getResultData}><button type="submit" id="signin-btn">Next</button></form>
-        
+      <h3>Here are the grant matches!</h3>
+      <div><label>Turn on Notifications for your search</label> <ToggleButton value={ true } /></div>
+      
+
+      <div >
+                <ResultCard isBusy={isBusy} dataR={resultData} user={user}/>
+            </div>
       </div>
     </>
   )
