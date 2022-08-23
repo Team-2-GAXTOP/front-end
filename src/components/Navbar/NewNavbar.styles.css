@@ -1,0 +1,34 @@
+.navbarWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  height: 90px;
+  width: 100%;
+  background-color: #1960D3;
+}
+
+.logoWrapper {
+  position: relative;
+  top: 6px;
+}
+
+.actualLogo {
+  width: auto;
+  height: 60px;
+}
+
+.resourcesBtn {
+  font-weight: 600;
+  text-decoration: none;
+  color: inherit;
+  padding: 15px 20px;
+  background-color: aliceblue;
+  border-radius: 7px;
+}
+
+.rightSideWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
