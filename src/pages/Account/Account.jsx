@@ -46,7 +46,6 @@ const Account = ({ user, setUser }) => {
         <p>0 grants</p>
         <div className='rowWrapper'>
           <TopMatchesCard defaultStateCard={true} imageIcon={AppliedGrants} grantCardText="Your applied grants will appear here!"/>
-          
         </div>
       </div>
 
