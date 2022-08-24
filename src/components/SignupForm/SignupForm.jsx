@@ -39,13 +39,16 @@ const SignupForm = ({  user, setUser }) => {
   };
   
   return (
+    <div className="signupWrapper">
+    
     <form
       autoComplete="off"
       onSubmit={handleSubmit}
-      className="sign-up-form-container"
-    >
+      
+      >
+      <div className="sign-up-form-container">
       <div className="sign-up-input-container">
-        <label>*First Name:</label>
+        <div className="nameHolder"> <label>*First Name:</label> </div>
         <input
           required
           type="text"
@@ -59,7 +62,7 @@ const SignupForm = ({  user, setUser }) => {
         />
       </div>
       <div className="sign-up-input-container">
-        <label>*Last Name:</label>
+        <div className="nameHolder"> <label>*Last Name:</label> </div>
         <input
           required
           type="text"
@@ -73,7 +76,7 @@ const SignupForm = ({  user, setUser }) => {
         />
       </div>
       <div className="sign-up-input-container">
-        <label>*Email Address</label>
+        <div className="nameHolder"> <label>*Email Address</label> </div>
         <input
           required
           type="email"
@@ -87,7 +90,7 @@ const SignupForm = ({  user, setUser }) => {
         />
       </div>
       <div className="sign-up-input-container">
-        <label>Phone Number</label>
+        <div className="nameHolder"> <label>Phone Number</label> </div>
         <input
           type="text"
           autoComplete="off"
@@ -99,7 +102,7 @@ const SignupForm = ({  user, setUser }) => {
         />
       </div>
       <div className="sign-up-input-container">
-        <label>*Password</label>
+        <div className="nameHolder"> <label>*Password</label> </div>
         <input
           required
           type="password"
@@ -113,7 +116,7 @@ const SignupForm = ({  user, setUser }) => {
         />
       </div>
       <div className="sign-up-input-container">
-      <label>*Confirm Password</label>
+        <div className="nameHolder"> <label>*Confirm Password</label> </div>
         <input
           required
           type="password"
@@ -126,14 +129,16 @@ const SignupForm = ({  user, setUser }) => {
           className="form-control"
         />
       </div>
-      <div className="sign-up-button-container">
+      </div>    
+      <div style={{marginTop: "20px"}} className="sign-up-button-container">
         <input
           type="submit"
           className="sign-up-button"
           value="Create account"
         />
       </div>
-    </form>
+      </form>
+    </div>
   );
 };
 
