@@ -46,8 +46,7 @@ const ResultPage = ({ user, setUser }) => {
       <div>
       <h3>Here are the grant matches!</h3>
       <div><label>Turn on Notifications for your search</label> <ToggleButton value={ true } /></div>
-      
-
+    
       <div >
                 <ResultCard isBusy={isBusy} dataR={resultData} user={user}/>
             </div>
