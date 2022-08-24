@@ -6,9 +6,6 @@ import {supabase} from "../../utils/supabase";
 import ResultCard from '../../components/ResultCard/ResultCard'
 
 
-import ToggleButton from 'react-toggle-button'
-
-
 const ResultPage = ({ user, setUser }) => {
   const navigate = useNavigate();
   
@@ -45,7 +42,7 @@ const ResultPage = ({ user, setUser }) => {
     <>
       <div>
       <h3>Here are the grant matches!</h3>
-      <div><label>Turn on Notifications for your search</label> <ToggleButton value={ true } /></div>
+      <div><label>Turn on Notifications for your search</label></div>
     
       <div >
                 <ResultCard isBusy={isBusy} dataR={resultData} user={user}/>
