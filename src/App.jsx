@@ -32,7 +32,7 @@ const App = () => {
         <NewNavbar user={user} setUser={setUser} />
         <Routes>
         <Route path='/profile-complete' element={<ProfileCompletePage user={user} setUser={setUser}/> }/>
-        <Route path='/onboarding' element={<OnboardingPage user={user} setUser={setUser}/>} />
+        {/* <Route path='/onboarding' element={<OnboardingPage user={user} setUser={setUser}/>} /> */}
         <Route path='/account' element={<Account user={user} setUser={setUser}/>} />
         <Route path='/results' element={<ResultPage user={user} setUser={setUser}/>} />
         </Routes>
@@ -47,7 +47,7 @@ const App = () => {
             <Route path='/profile-complete' element={<ProfileCompletePage user={user} setUser={setUser}/> }/>
             <Route path='/' element={<LandingPage user={user} setUser={setUser}/> }/>
             <Route path='/sign-up-free' element={ <AuthPage user={user} setUser={setUser} /> } />
-            
+            <Route path='/onboarding' element={<OnboardingPage user={user} setUser={setUser}/>} />
             <Route path="/signup" element={ <SignupForm user={user} setUser={setUser} /> } />
             <Route path="/login" element={ <LoginForm user={user} setUser={setUser} /> } />
           </Routes>
