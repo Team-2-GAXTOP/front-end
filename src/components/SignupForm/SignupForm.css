@@ -1,3 +1,13 @@
+.signupWrapper {
+  position: relative;
+  bottom: 40px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .sign-up-input-container {
   margin-bottom: 16px;
   width: 100%;
@@ -9,19 +19,19 @@
   color: #0050a3 !important;
 }
 .sign-up-button {
-  background-color: white;
-    border: none;
-    border-radius: 15px;
-    color: black;
-    padding: 10px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  background-color: white; 
+  border: none;
+  border-radius: 7px;
+  color: black;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.15);
 }
 
 .have-account {
@@ -33,10 +43,16 @@
 
 .sign-up-form-container {
   display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.25vmin;
-    position: fixed;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25vmin;
+    /* position: fixed;
     top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 50%; */
+    /* transform: translate(-50%, -50%); */
+}
+
+.nameHolder {
+  width: 100%;
+  display: flex;
+  justify-content: start;
 }
