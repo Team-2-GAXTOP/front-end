@@ -8,7 +8,7 @@ const ProfileCompletePage = ({ user, setUser }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    navigate("/onboarding");
+    navigate("/results");
   }
 
   return (

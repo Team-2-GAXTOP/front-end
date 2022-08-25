@@ -29,7 +29,6 @@ const ResultPage = ({ user, setUser }) => {
       .from('grants')
       .select('*')
       .match({ eligibility: role })
-
         setBusy(false);
         setResultData(data);
     }
