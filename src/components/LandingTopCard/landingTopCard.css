@@ -1,6 +1,8 @@
 .top {
 display: flex;
 height: 100vh;
+width: 100vw;
+position: relative;
 }
 .top-card-wrapper {
 flex: 1;
@@ -11,12 +13,14 @@ position: relative;
 }
 .top-card-left {
 left: 0;
+z-index: 1;
 padding: 50px;
 height: 50%;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
 position: absolute;
+
 }
 
 .top-htag{
@@ -26,6 +30,7 @@ padding: 3rem;
 .top-card-right {
 flex: 1;
 position: relative;
+z-index: -1;
 }
 
 .top-img-bg {
@@ -61,8 +66,7 @@ height: 26.5rem;
     margin: 2rem;
     padding: 2rem;
     margin-top: 10rem;
-    
-    
+    z-index: 2;    
 }
 
 @media screen and (max-width: 480px) {
