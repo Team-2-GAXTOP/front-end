@@ -8,10 +8,8 @@ return (
 <div className='top-card'>
     <div className='top-card-wrapper'>
     <div className='top-card-left'>
-        <div className='text-div'>
         <h1 className='top-htag'> We make finding grants easy! </h1>
         <h2 className='top-htag'> Find your next broadband grants here </h2>
-        </div>
       <button type="button" id="grant-quiz-btn"><Link style={{ textDecoration: 'none', color:'white', textAlign:'center', }} to={"/onboarding"}> Take Grant Match Quiz </Link></button>
         </div>
     </div>
