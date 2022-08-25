@@ -20,6 +20,7 @@ const ResourcesPage = ({ user, setUser }) => {
             title="Broadband Grant Guides"
             description="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto omnis laudantium necessitatibus dolores? Iure recusandae unde illum nisi ipsa facere a odio, tenetur dicta inventore porro laborum eaque mollitia rem."
           />
+          
         </div>
       );
     }
