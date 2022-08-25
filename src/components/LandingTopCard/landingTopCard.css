@@ -2,13 +2,15 @@
 display: flex;
 height: 100vh;
 }
+
 .top-card-wrapper {
-flex: 1;
-display: flex;
+grid-template-columns: 1fr 1fr;
+display: grid;
 align-items: center;
 justify-content: center;
 position: relative;
 }
+
 .top-card-left {
 left: 0;
 padding: 50px;
@@ -24,16 +26,10 @@ padding: 3rem;
 }
 
 .top-card-right {
-flex: 1;
 position: relative;
 }
 
 .top-img-bg {
-position: relative;
-width: 40.3rem;
-height: 30.1rem;
-top: 3.6rem;
-left: 80.875rem;
 background: rgba(25, 96, 211, 0.37);    
 }
 
@@ -42,25 +38,22 @@ object-fit: cover;
 position: absolute;
 right: 0rem;
 top: 2.5rem;
-width: 49rem;
-height: 26.5rem;
+width: 39rem;
+height: 20.5rem;
 }
 
 #grant-quiz-btn {
     background: #3B7FEE;
     color: white;
-    height: 8.375rem;
-    width: 30.875rem;
-    font-size: 2rem;
+    height: 3.375rem;
+    width: 19.875rem;
+    font-size: 1rem;
     text-align: center;
-    font-weight: 500;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     text-decoration: none;
     border: none;
     margin: 2rem;
     padding: 2rem;
-    margin-top: 10rem;
-    
     
 }

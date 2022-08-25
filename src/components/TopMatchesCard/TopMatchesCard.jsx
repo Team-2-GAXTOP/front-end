@@ -12,7 +12,7 @@ const TopMatchesCard = ({ defaultStateCard, imageIcon, grantCardText }) => {
                 <img className="placeholderImg" src="placeholderImg.png" alt="place holder image" />
             
                 <div>
-                  <h4>Org name</h4>
+                  <h4 style={{marginBlockStart: "0"}}>Org name</h4>
                   <p>type of grant</p>
                 </div>
 

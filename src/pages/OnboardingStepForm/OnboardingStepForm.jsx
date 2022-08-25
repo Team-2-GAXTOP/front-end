@@ -1,15 +1,16 @@
 import { useState } from "react"
 import StepOne from "../../components/Forms/StepOne"
 import StepTwo from "../../components/Forms/StepTwo"
-import Final from "../../components/Forms/Final"
-
+import SignUpStep from "../../components/SignUpStep/SignUpStep"
+import GoogleLogin  from '../../components/GoogleLogin/GoogleLogin';
+import { useNavigate } from "react-router-dom";
 import "./Onboarding.styles.css"
 import StepThree from "../../components/Forms/StepThree"
 import StepFour from "../../components/Forms/StepFour"
 import StepFive from "../../components/Forms/StepFive"
 
 const OnboardingStepForm = ({ nextStep, prevStep, step , user, setUser }) => {
-
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     zipcode: '',
     applyingAs: '',
@@ -22,6 +23,10 @@ const OnboardingStepForm = ({ nextStep, prevStep, step , user, setUser }) => {
     whyTextArea: ''
   }) 
 
+    const goToSignUp = () => {
+      navigate('/signup');
+    };
+
   // handling form input data by taking onchange value and updating our prev form data state
   const handleInputData = (input) => e => {
     // input value from the form 
@@ -32,6 +37,8 @@ const OnboardingStepForm = ({ nextStep, prevStep, step , user, setUser }) => {
       [input]: value
     }))
   }
+
+  
 
   // switch case to show different form in each step 
   switch (step) {
@@ -57,7 +64,9 @@ const OnboardingStepForm = ({ nextStep, prevStep, step , user, setUser }) => {
       )
     case 6:
       return (
-        <Final values={formData} user ={user} setUSer={setUser} /> 
+        // <Final values={formData} user ={user} setUSer={setUser} /> 
+         
+        <SignUpStep values={formData} user ={user} setUSer={setUser} />
       )
     default: 
       return (

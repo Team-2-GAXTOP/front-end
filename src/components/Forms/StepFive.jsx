@@ -3,11 +3,11 @@ import {supabase} from "../../utils/supabase";
 
 const StepFive = ({ nextStep, handleFormData, prevStep, values , user, setUser}) => {
   const submitFormData = async (e) => {
-    const { zipcode, applyingAs, orgName, address, size, prevApplied, teamOfWriters, grantAmount, whyTextArea } = values
+    //const { zipcode, applyingAs, orgName, address, size, prevApplied, teamOfWriters, grantAmount, whyTextArea } = values
     e.preventDefault()
-    const { data, error } = await supabase
-    .from('user_profile')
-    .insert([{ zipcode:zipcode, role: applyingAs, userID: user.id, amount: grantAmount }])
+    // const { data, error } = await supabase
+    // .from('user_profile')
+    // .insert([{ zipcode:zipcode, role: applyingAs, userID: user.id, amount: grantAmount }])
     nextStep()
   }
 
