@@ -18,24 +18,24 @@
     margin-right: 10px;
 }
 
-#status-div, #date-div {
+/* #status-div, #date-div {
     font-weight: bold;
     margin-top: 40px;
     margin-left: 30px
-}
+} */
 
 
   .viewBtn {
-    width: 75px;
+    width: 100%;
+    padding: 20px 0;
     height: 30.34px;
-    border-radius: 10px;
+    border-radius: 7px;
     border-width: 0px;
     background-color: #1960D3;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    margin-left: 50%;
     margin-bottom: 10px
   }
 

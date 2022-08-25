@@ -44,7 +44,7 @@ const App = () => {
           <NewNavbar user={user} setUser={setUser} />
           <main className="App">
             <Routes>
-            <Route path='/profile-complete' element={<ProfileCompletePage user={user} setUser={setUser}/> }/>
+            <Route path='/profile-complete' element={<ProfileCompletePage user={user} setUser={setUser} />} />
             <Route path='/' element={<LandingPage user={user} setUser={setUser}/> }/>
             <Route path='/sign-up-free' element={ <AuthPage user={user} setUser={setUser} /> } />
             <Route path="/signup" element={ <SignupForm user={user} setUser={setUser} /> } />

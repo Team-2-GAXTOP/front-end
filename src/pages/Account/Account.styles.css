@@ -19,7 +19,17 @@
 }
 
 .grantMatches {
-  border: 1px solid black;
+  width: 250px;
+  height: 30.34px;
+  padding: 20px 10px;
+  border-radius: 7px;
+  border-width: 0px;
+  background-color: #1960D3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-bottom: 10px
 }
 
 .savedGrantsSectionWrapper {
