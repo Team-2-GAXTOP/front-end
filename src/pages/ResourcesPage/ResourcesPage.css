@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Oxygen, sans-serif;
+    margin: 2rem;
+  }
+  
+  .wrapper {
+    display: grid;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .card {
+    overflow: hidden;
+    box-shadow: 0 2px 20px gray;
+    border-radius: 2px;
+    display: grid;
+    grid-template-columns: 200px 400px 50px;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 200ms ease-in;
+  }
+  
+  .card__image {
+    height: 80%;
+    width: 100%;
+    padding: 15px;
+    margin: 15px;
+  }
+  
+  .card__title {
+    padding: 1rem;
+  }
+  
+  .card__description {
+    padding: 0 1rem;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+  }
+  
