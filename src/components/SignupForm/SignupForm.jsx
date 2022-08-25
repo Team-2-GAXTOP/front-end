@@ -1,11 +1,15 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./SignupForm.css";
+import {supabase} from "../../utils/supabase";
 import  {signup}  from '../../utils/Auth'
+import { getUser } from '../../utils/users-service';
 
-const SignupForm = ({  user, setUser }) => {
+const SignupForm = ({  handleFormData, values, user1, setUser1 }) => {
 
+  const [user, setUser] = useState(getUser());
   const navigate = useNavigate();
+  const { zipcode, applyingAs, orgName, address, size, prevApplied, teamOfWriters, grantAmount, whyTextArea } = values
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -34,6 +38,9 @@ const SignupForm = ({  user, setUser }) => {
     if (signup.error) {
       console.log(signup.error.message);
     } else {
+      const { data, error } = await supabase
+      .from('user_profile')
+      .insert([{ zipcode:zipcode, role: applyingAs, userID: user.id, amount: grantAmount }])
       navigate("/profile-complete");
     }
   };

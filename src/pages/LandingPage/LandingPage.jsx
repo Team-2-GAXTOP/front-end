@@ -4,8 +4,6 @@ import LandingBotCard from '../../components/LandingBotCard/landingBotCard';
 import LandingTopCard from '../../components/LandingTopCard/landingTopCard';
 // import { Link } from 'react-router-dom';
 
-
-
 const LandingPage = ({ user, setUser }) => {
 
   return (
