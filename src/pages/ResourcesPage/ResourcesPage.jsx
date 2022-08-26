@@ -31,7 +31,7 @@ const ResourcesPage = ({ user, setUser }) => {
           <div className="grid-item-1">
             <img src={props.img} className="card__image" />
           </div>
-          <div className="grid-item-2">
+          <div className="grid-item-2Resource">
             <h2 className="card__title">{props.title}</h2>
             <p className="card__description">{props.description}</p>
           </div>

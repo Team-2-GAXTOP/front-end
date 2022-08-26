@@ -9,6 +9,11 @@
   h1 {
     text-align: center;
   }
+
+  .grid-item-2Resource{
+    text-align: left;
+    margin-left: 50px;
+  }
   
   .cardResource {
     overflow: hidden;
