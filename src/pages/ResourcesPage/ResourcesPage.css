@@ -1,23 +1,16 @@
-* {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Oxygen, sans-serif;
-    margin: 2rem;
-  }
-  
-  .wrapper {
+ .wrapperResource {
     display: grid;
     gap: 2rem;
     justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 101px;
   }
   
   h1 {
     text-align: center;
   }
   
-  .card {
+  .cardResource {
     overflow: hidden;
     box-shadow: 0 2px 20px gray;
     border-radius: 2px;
@@ -26,6 +19,7 @@
     justify-content: space-between;
     cursor: pointer;
     transition: transform 200ms ease-in;
+    z-index: 1;
   }
   
   .card__image {
