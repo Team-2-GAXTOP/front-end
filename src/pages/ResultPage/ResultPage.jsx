@@ -43,9 +43,9 @@ const ResultPage = ({ user, setUser }) => {
 
 
   
-  const resultCards = resultData.map((data, id) => {
+  const resultCards = resultData.map((data, idx) => {
     return ( 
-      <NewResultCard isBusy={isBusy} dataValue={data} user={user}/>
+      <NewResultCard key={`key-${idx}`} isBusy={isBusy} dataValue={data} user={user}/>
     )
   })
 
@@ -63,7 +63,6 @@ const ResultPage = ({ user, setUser }) => {
         <div>
         
           <div>
-          
             {resultCards}
           </div>
         </div>
