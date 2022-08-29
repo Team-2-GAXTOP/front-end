@@ -4,6 +4,9 @@ import { useState , useEffect} from "react"
 import { useNavigate } from "react-router-dom";
 import {supabase} from "../../utils/supabase";
 import ResultCard from '../../components/ResultCard/ResultCard'
+import NewResultCard from "../../components/ResultCard/NewResultCard";
+import './ResultPage.styles.css'
+import ToggleSwitch from "../../components/toggleSwitch/toggleSwitch";
 
 
 const ResultPage = ({ user, setUser }) => {
@@ -23,31 +26,43 @@ const ResultPage = ({ user, setUser }) => {
       const zipcode = questions[0].zipcode;
       const role = questions[0].role;
       const amount = questions[0].amount;
-      console.log (role + " " + amount )
+      console.log (role + " " + zipcode )
       
       const { data, error } = await supabase
-      .from('grants')
+      .from('grants_data')
       .select('*')
-      .match({ eligibility: role })
+      .in('state', [zipcode, 'All'])
+      .ilike('eligible_applicants', '%'+role+'%')
+      console.log(data);
         setBusy(false);
         setResultData(data);
     }
+    
     getResultData();
 }, []);
 
 
 
   return (
-    <>
-      <div>
-      <h3>Here are the grant matches!</h3>
-      <div><label>Turn on Notifications for your search</label></div>
-    
-      <div >
-                <ResultCard isBusy={isBusy} dataR={resultData} user={user}/>
-            </div>
+    <div className="resultsPageWrapper">
+      <div className="resultsContainer">
+        <div className="resultPageTopHeader">
+          <h3>Your grant matches!</h3>
+
+          <div style={{display: 'flex'}}>
+            <ToggleSwitch label="Notifications"/>
+          </div>
+        </div>
+
+        <div>
+        
+          <div>
+            <NewResultCard isBusy={isBusy} dataR={resultData} user={user}/>
+          </div>
+        </div>
+
       </div>
-    </>
+    </div>
   )
 }
 

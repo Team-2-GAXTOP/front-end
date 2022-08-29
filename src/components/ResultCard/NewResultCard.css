@@ -1,0 +1,93 @@
+.newresultcardWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+  height: 260px;
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.newresultcardTopRight {
+  display: flex;
+  flex-direction: column;
+}
+
+.newresultcardTop {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.newresultcardBottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.newresultcardTopLeft {
+  width: 60%;
+}
+
+.newresultcardBottomLeftDeadline {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnResultsPage {
+  width: 75px;
+  height: 42.34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 0;
+  border-radius: 8px;
+  background: #3B7FEE;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  /* margin: 0.25rem; */
+  cursor: pointer;
+}
+
+.deadlineImg {
+  width: 18px;
+  margin-right: 10px;
+}
+
+.deadlineWord {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+
+.dateForDeadline {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.statusWord {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.statusSingle {
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.postedWord {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+}

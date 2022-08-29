@@ -20,6 +20,8 @@ import ResultPage from './pages/ResultPage/ResultPage';
 import NewNavbar from './components/Navbar/NewNavbar';
 import NewFooter from './components/Footer/NewFooter';
 
+import NewLandingPage from './pages/LandingPage/NewLandingPage';
+
 const App = () => {
 
   const [user, setUser] = useState(getUser());
@@ -44,12 +46,13 @@ const App = () => {
           <NewNavbar user={user} setUser={setUser} />
           <main className="App">
             <Routes>
-            <Route path='/profile-complete' element={<ProfileCompletePage user={user} setUser={setUser} />} />
-            <Route path='/' element={<LandingPage user={user} setUser={setUser}/> }/>
-            <Route path='/sign-up-free' element={ <AuthPage user={user} setUser={setUser} /> } />
-            <Route path="/signup" element={ <SignupForm user={user} setUser={setUser} /> } />
-            <Route path="/login" element={ <LoginForm user={user} setUser={setUser} /> } />
-            <Route path='/onboarding' element={<OnboardingPage user={user} setUser={setUser}/>} />
+              <Route path='/profile-complete' element={<ProfileCompletePage user={user} setUser={setUser} />} />
+              <Route path='/test-results' element={<ResultPage />} />
+              <Route path='/' element={<NewLandingPage user={user} setUser={setUser}/> }/>
+              <Route path='/sign-up-free' element={ <AuthPage user={user} setUser={setUser} /> } />
+              <Route path="/signup" element={ <SignupForm user={user} setUser={setUser} /> } />
+              <Route path="/login" element={ <LoginForm user={user} setUser={setUser} /> } />
+              <Route path='/onboarding' element={<OnboardingPage user={user} setUser={setUser}/>} />
           </Routes>
           </main>
           <NewFooter/>

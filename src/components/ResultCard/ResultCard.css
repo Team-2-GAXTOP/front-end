@@ -4,8 +4,8 @@
     border-radius: 7px;
     display: grid;
     grid-template-columns: 1.25fr .75fr;
-    margin-left: 10%;
-    margin-right: 10%;
+    /* margin-left: 10%;
+    margin-right: 10%; */
 }
 
 .title-div {
@@ -27,7 +27,7 @@
 
   .viewBtn {
     width: 100%;
-    padding: 20px 0;
+    /* padding: 20px 0; */
     height: 30.34px;
     border-radius: 7px;
     border-width: 0px;
