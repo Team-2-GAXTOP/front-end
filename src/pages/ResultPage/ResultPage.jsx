@@ -42,6 +42,12 @@ const ResultPage = ({ user, setUser }) => {
 }, []);
 
 
+  
+  const resultCards = resultData.map((data, id) => {
+    return ( 
+      <NewResultCard isBusy={isBusy} dataValue={data} user={user}/>
+    )
+  })
 
   return (
     <div className="resultsPageWrapper">
@@ -57,7 +63,8 @@ const ResultPage = ({ user, setUser }) => {
         <div>
         
           <div>
-            <NewResultCard isBusy={isBusy} dataR={resultData} user={user}/>
+          
+            {resultCards}
           </div>
         </div>
 
