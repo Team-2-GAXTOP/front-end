@@ -16,6 +16,7 @@ import Footer from './components/Footer/Footer';
 import { getUser } from '../src/utils/users-service';
 import Account from './pages/Account/Account';
 import ResultPage from './pages/ResultPage/ResultPage';
+import ResourcesPage from './pages/ResourcesPage/ResourcesPage';
 
 import NewNavbar from './components/Navbar/NewNavbar';
 import NewFooter from './components/Footer/NewFooter';
@@ -37,6 +38,7 @@ const App = () => {
         <Route path='/' element={<LandingPage user={user} setUser={setUser}/> }/>
         <Route path='/account' element={<Account user={user} setUser={setUser}/>} />
         <Route path='/results' element={<ResultPage user={user} setUser={setUser}/>} />
+        {/* <Route path='/resources' element={<ResourcesPage />} /> */}
         </Routes>
         <NewFooter/>
 
@@ -46,13 +48,13 @@ const App = () => {
           <NewNavbar user={user} setUser={setUser} />
           <main className="App">
             <Routes>
-              <Route path='/profile-complete' element={<ProfileCompletePage user={user} setUser={setUser} />} />
-              <Route path='/test-results' element={<ResultPage />} />
-              <Route path='/' element={<NewLandingPage user={user} setUser={setUser}/> }/>
-              <Route path='/sign-up-free' element={ <AuthPage user={user} setUser={setUser} /> } />
-              <Route path="/signup" element={ <SignupForm user={user} setUser={setUser} /> } />
-              <Route path="/login" element={ <LoginForm user={user} setUser={setUser} /> } />
-              <Route path='/onboarding' element={<OnboardingPage user={user} setUser={setUser}/>} />
+            <Route path='/profile-complete' element={<ProfileCompletePage user={user} setUser={setUser} />} />
+            <Route path='/' element={<LandingPage user={user} setUser={setUser}/> }/>
+            <Route path='/sign-up-free' element={ <AuthPage user={user} setUser={setUser} /> } />
+            <Route path='/resources' element={<ResourcesPage user={user} setUser={setUser}/>} />
+            <Route path="/signup" element={ <SignupForm user={user} setUser={setUser} /> } />
+            <Route path="/login" element={ <LoginForm user={user} setUser={setUser} /> } />
+            <Route path='/onboarding' element={<OnboardingPage user={user} setUser={setUser}/>} />
           </Routes>
           </main>
           <NewFooter/>
