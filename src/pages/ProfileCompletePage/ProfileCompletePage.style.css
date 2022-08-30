@@ -1,16 +1,12 @@
 .profileCompleteWrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: auto;
-  padding: 250px 0;
-}
-
-.profileCompleteWrapperInside {
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25vmin;
   position: relative;
   bottom: 40px;
+  height: 70vh;
+  justify-items: center;
 }
 
 #matchesBtn {
@@ -19,7 +15,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   border: 0;
   border-radius: 8px;
   background: #3B7FEE;

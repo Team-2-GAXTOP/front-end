@@ -1,4 +1,3 @@
-// import './ProfileCompletePage.css';
 
 import { useNavigate } from "react-router-dom";
 import './ProfileCompletePage.style.css'
@@ -14,14 +13,14 @@ const ProfileCompletePage = ({ user, setUser }) => {
 
   return (
     <div className="profileCompleteWrapper">
+      <div className='clap-image-div'>
+        <img src={require("../../utils/images/hand.png")} alt=""></img>
+      </div>
+      <div className='text-div'>
+        <h3>PROFILE:  Complete!</h3>
+        <h3>Congratulations your profile is 100% complete. </h3>
+      </div>
       <div className="profileCompleteWrapperInside">
-        <div className='clap-image-div'>
-          <img src={require("../../utils/images/hand.png")} alt=""></img>
-        </div>
-        <div className='text-div'>
-          <p>PROFILE:  Complete!</p>
-          <p>Congratulations your profile is 100% complete. </p>
-        </div>
         <form onSubmit={handleSubmit}><button type="submit" id="matchesBtn">View your matches</button></form>
       </div>
     </div>
