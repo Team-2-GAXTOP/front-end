@@ -32,7 +32,7 @@ const ResultPage = ({ user, setUser }) => {
       .from('grants_data')
       .select('*')
       .in('state', [zipcode, 'All'])
-      .ilike('eligible_applicants', '%'+role+'%')
+      .ilike('tags', '%'+role+'%')
       console.log(data);
         setBusy(false);
         setResultData(data);

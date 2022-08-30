@@ -26,21 +26,28 @@ const StepTwo = ({ nextStep, handleFormData, prevStep, values, user, setUser }) 
                 name="applyingAs"  
                 onChange={handleFormData("applyingAs")}    
               />
-              <label htmlFor="applyingAs">Individual</label><br />
+              <label htmlFor="applyingAs">An Individual</label><br />
               <input 
                 type="radio"
                 value="Organization"
                 name="applyingAs"  
                 onChange={handleFormData("applyingAs")}     
               />
-              <label htmlFor="applyingAs">Organization</label><br />
+              <label htmlFor="applyingAs">An Organization</label><br />
               <input 
                 type="radio"
-                value="Government Agency"
+                value="Government"
                 name="applyingAs"  
                 onChange={handleFormData("applyingAs")}     
               />
-              <label htmlFor="applyingAs">Government Agency</label><br />
+              <label htmlFor="applyingAs">A Government Agency</label><br />
+              <input 
+                type="radio"
+                value="Education"
+                name="applyingAs"  
+                onChange={handleFormData("applyingAs")}     
+              />
+              <label htmlFor="applyingAs">An Educational Institution</label><br />
                   
               <br />
               <p><b>*</b> if you are from an organisation</p>
