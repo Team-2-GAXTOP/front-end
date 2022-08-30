@@ -21,9 +21,9 @@ const OnboardingPage = ({ user, setUser }) => {
   return (
     <div className="wrapperPage">
       <OnboardingStepForm nextStep={nextStep} prevStep={prevStep} step={step}  user ={user} setUSer={setUser}  />
-      <div className="paginationOnboarding">
+      {/* <div className="paginationOnboarding">
         <p>Question {step} of 5</p>
-      </div>
+      </div> */}
     </div> 
   )
 }
