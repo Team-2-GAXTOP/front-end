@@ -3,7 +3,6 @@ import {supabase} from "../../utils/supabase";
 
 const StepSix = ({ nextStep, handleFormData, prevStep, values , user, setUser}) => {
   const submitFormData = async (e) => {
-    
     e.preventDefault()
     
     nextStep()
