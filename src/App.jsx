@@ -21,6 +21,7 @@ import ResourcesPage from './pages/ResourcesPage/ResourcesPage';
 import NewNavbar from './components/Navbar/NewNavbar';
 import NewFooter from './components/Footer/NewFooter';
 
+import GrantDetails from './pages/GrantDetails/GrantDetails';
 import NewLandingPage from './pages/LandingPage/NewLandingPage';
 
 const App = () => {
@@ -48,13 +49,16 @@ const App = () => {
           <NewNavbar user={user} setUser={setUser} />
           <main className="App">
             <Routes>
-            <Route path='/profile-complete' element={<ProfileCompletePage user={user} setUser={setUser} />} />
-            <Route path='/' element={<NewLandingPage user={user} setUser={setUser}/> }/>
-            <Route path='/sign-up-free' element={ <AuthPage user={user} setUser={setUser} /> } />
-            <Route path='/resources' element={<ResourcesPage user={user} setUser={setUser}/>} />
-            <Route path="/signup" element={ <SignupForm user={user} setUser={setUser} /> } />
-            <Route path="/login" element={ <LoginForm user={user} setUser={setUser} /> } />
-            <Route path='/onboarding' element={<OnboardingPage user={user} setUser={setUser}/>} />
+              <Route path='/profile-complete' element={<ProfileCompletePage user={user} setUser={setUser} />} />
+              <Route path='/' element={<NewLandingPage user={user} setUser={setUser}/> }/>
+              <Route path='/sign-up-free' element={ <AuthPage user={user} setUser={setUser} /> } />
+              <Route path='/resources' element={<ResourcesPage user={user} setUser={setUser}/>} />
+              <Route path="/signup" element={ <SignupForm user={user} setUser={setUser} /> } />
+              <Route path="/login" element={<LoginForm user={user} setUser={setUser} />} />
+              
+              <Route path="/grant-details" element={<GrantDetails user={user} setUser={setUser} />} />
+              
+              <Route path='/onboarding' element={<OnboardingPage user={user} setUser={setUser}/>} />
           </Routes>
           </main>
           <NewFooter/>
