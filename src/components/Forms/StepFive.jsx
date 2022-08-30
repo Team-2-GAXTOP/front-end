@@ -70,4 +70,4 @@ const StepFive = ({ nextStep, handleFormData, prevStep, values , user, setUser})
   )
 }
 
-export default StepSix
+export default StepFive
