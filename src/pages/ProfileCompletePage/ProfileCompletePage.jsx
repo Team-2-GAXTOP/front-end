@@ -5,10 +5,11 @@ import './ProfileCompletePage.style.css'
 
 const ProfileCompletePage = ({ user, setUser }) => {
   const navigate = useNavigate();
-
+  console.log(user);
+  setUser(user);
   const handleSubmit = async (e) => {
     e.preventDefault();
-    navigate("/results");
+    navigate("/login-back");
   }
 
   return (
@@ -21,7 +22,7 @@ const ProfileCompletePage = ({ user, setUser }) => {
           <p>PROFILE:  Complete!</p>
           <p>Congratulations your profile is 100% complete. </p>
         </div>
-        <form onSubmit={handleSubmit}><button type="submit" id="signin-btn">Next</button></form>
+        <form onSubmit={handleSubmit}><button type="submit" id="matchesBtn">View your matches</button></form>
       </div>
     </div>
   )

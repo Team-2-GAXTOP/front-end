@@ -2,6 +2,7 @@ import { useNavigate, Link } from 'react-router-dom'
 import { googleAuth } from '../../utils/Auth'
 import SignupForm  from '../SignupForm/SignupForm'
 import GoogleLogin  from '../../components/GoogleLogin/GoogleLogin';
+import './SignUpStep.css';
 import { useState } from "react"
 
 const SignUpStep = ({ values, user, setUser }) => {
@@ -17,7 +18,8 @@ const SignUpStep = ({ values, user, setUser }) => {
     <>
     { isBusy ?
     <>
-    <div className='login-main-div'>
+    <div className='signup-main-div'>
+      <h3>Please make an account to save your answers!</h3>
         <div className='signup-div'>
           <button type="button" id="signup-btn" onClick={goToSignUp}>Sign up for free</button>
         </div>

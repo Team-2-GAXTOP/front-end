@@ -11,6 +11,7 @@ import ProfileCompletePage from './pages/ProfileCompletePage/ProfileCompletePage
 import LandingPage from './pages/LandingPage/LandingPage';
 import SignupForm from './components/SignupForm/SignupForm';
 import LoginForm from './components/LoginForm/LoginForm';
+import LoginBackForm from './components/LoginForm/LoginBackForm';
 import NavBar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import { getUser } from '../src/utils/users-service';
@@ -54,6 +55,7 @@ const App = () => {
             <Route path='/resources' element={<ResourcesPage user={user} setUser={setUser}/>} />
             <Route path="/signup" element={ <SignupForm user={user} setUser={setUser} /> } />
             <Route path="/login" element={ <LoginForm user={user} setUser={setUser} /> } />
+            <Route path="/login-back" element={ <LoginBackForm user={user} setUser={setUser} /> } />
             <Route path='/onboarding' element={<OnboardingPage user={user} setUser={setUser}/>} />
           </Routes>
           </main>

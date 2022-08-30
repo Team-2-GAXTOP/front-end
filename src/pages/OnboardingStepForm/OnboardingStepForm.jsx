@@ -44,23 +44,48 @@ const OnboardingStepForm = ({ nextStep, prevStep, step , user, setUser }) => {
   switch (step) {
     case 1:
       return (
+        <>
         <StepOne nextStep={nextStep} handleFormData={handleInputData} values={formData} user ={user} setUSer={setUser} />
-      )
+        <div className="paginationOnboarding">
+        <p>Question {step} of 6</p>
+      </div>
+      </>
+        )
     case 2: 
       return (
+        <>
         <StepTwo nextStep={nextStep} prevStep={prevStep} handleFormData={handleInputData} values={formData} user ={user} setUSer={setUser} />
-      )
+        <div className="paginationOnboarding">
+        <p>Question {step} of 6</p>
+      </div>
+      </>
+        )
     case 3: 
       return (
+        <>
         <StepThree nextStep={nextStep} prevStep={prevStep} handleFormData={handleInputData} values={formData} user ={user} setUSer={setUser} />
+        <div className="paginationOnboarding">
+        <p>Question {step} of 6</p>
+      </div>
+      </>
       )
     case 4:
       return (
+        <>
         <StepFour nextStep={nextStep} prevStep={prevStep} handleFormData={handleInputData} values={formData} user ={user} setUSer={setUser} />
+        <div className="paginationOnboarding">
+        <p>Question {step} of 6</p>
+      </div>
+      </>
       )
     case 5:
       return (
+        <>
         <StepFive nextStep={nextStep} prevStep={prevStep} handleFormData={handleInputData} values={formData} user ={user} setUSer={setUser} /> 
+        <div className="paginationOnboarding">
+        <p>Question {step} of 6</p>
+      </div>
+      </>
       )
     case 6:
       return (
