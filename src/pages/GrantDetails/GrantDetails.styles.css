@@ -1,0 +1,131 @@
+
+
+.grantDetailsWrapper {
+  padding: 50px 0 100px 0; 
+  height: auto;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.grantDetailsContainer {
+  width: 70%;
+  max-width: 1000px;
+  margin: 0 auto;
+  /* height: 30vh; */
+  box-sizing: border-box;
+}
+
+.grantDetailsBackToBrowse {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.grantBoxButtonHolder {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grantDetailsBox {
+  width: 50%;
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+  /* margin-top: 20px;
+  width: 368px;
+  height: 185px;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid black; */
+  box-sizing: border-box;
+}
+
+.grantDetailsBoxApplicationStatus {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.grantButtons {
+  display: flex;
+  align-self: flex-end;
+  flex-direction: row;
+}
+
+.applicationStatus {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: #59D45E;
+}
+
+.grantDetailsBoxDeadline {
+  display: flex;
+  flex-direction: column;
+}
+
+.grantBtn {
+  width: 100%;
+  /* padding: 20px 0; */
+  height: 30.34px;
+  border-radius: 7px;
+  border-width: 0px;
+  background-color: #1960D3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.grantBtn:not(:last-child) {
+  margin-right: 10px;
+}
+
+.grantDetailsActualData {
+  box-sizing: border-box;
+  margin-top: 50px;
+  height: auto;
+  min-height: 90vh;
+  width: 100%;
+  border: 1px solid #2A4758;
+  border-radius: 10px;
+}
+
+.grantTabs {
+  position: relative;
+  bottom: -1px;
+  margin-top: 25px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 20px 40px;
+  border-top: 1px solid #2a475867;
+  border-left: 1px solid #2a475867;
+  border-right: 1px solid #2a475867;
+}
+
+.grantTabsOther {
+  position: relative;
+  bottom: -1px;
+  z-index: 2;
+  margin-top: 25px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 20px 40px;
+  border-top: 1px solid #2a475867;
+  border-left: 1px solid #2a475867;
+  border-right: 1px solid #2a475867;
+  border-bottom: 1px solid white;
+}
+
+.grantDetailsActualDataTop {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #2a475867;
+}
+
+.grantDetailsActualDataBody {
+  padding: 40px;
+  display: flex;
+}

@@ -61,7 +61,6 @@ const ResultPage = ({ user, setUser }) => {
         </div>
 
         <div>
-        
           <div>
             {resultCards}
           </div>
