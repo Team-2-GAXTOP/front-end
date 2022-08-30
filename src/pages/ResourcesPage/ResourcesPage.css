@@ -42,7 +42,7 @@
     padding: 0 1rem;
   }
   
-  .card:hover {
+  .cardResource:hover {
     transform: scale(1.02);
   }
   
