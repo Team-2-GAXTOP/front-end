@@ -8,6 +8,7 @@ import "./Onboarding.styles.css"
 import StepThree from "../../components/Forms/StepThree"
 import StepFour from "../../components/Forms/StepFour"
 import StepFive from "../../components/Forms/StepFive"
+import StepSix from "../../components/Forms/StepSix";
 
 const OnboardingStepForm = ({ nextStep, prevStep, step , user, setUser }) => {
   const navigate = useNavigate();
@@ -63,6 +64,10 @@ const OnboardingStepForm = ({ nextStep, prevStep, step , user, setUser }) => {
         <StepFive nextStep={nextStep} prevStep={prevStep} handleFormData={handleInputData} values={formData} user ={user} setUSer={setUser} /> 
       )
     case 6:
+      return (
+        <StepSix nextStep={nextStep} prevStep={prevStep} handleFormData={handleInputData} values={formData} user ={user} setUSer={setUser} /> 
+      )
+    case 7:
       return (
         // <Final values={formData} user ={user} setUSer={setUser} /> 
          
