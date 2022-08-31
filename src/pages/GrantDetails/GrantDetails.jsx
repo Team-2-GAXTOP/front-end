@@ -147,7 +147,7 @@ const GrantDetails = ({ user, setUser }) => {
               </div>
 
               <div className='grantButtons'>
-                <button className='grantBtn'>Apply</button>
+                <a href={resultData[0].url} target='_blank' textDecoration = 'none' className='grantBtn'> <button className='grantBtn'>Apply</button></a>
                 <button className='grantBtn'>Save</button>
                 <button className='grantBtn'>Send</button>
               </div>
