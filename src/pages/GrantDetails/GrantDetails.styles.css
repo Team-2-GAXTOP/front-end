@@ -159,7 +159,7 @@ li {
     background-color: white;
 }
 
-p {
+p#grantDetails {
   float: left;
 }
 

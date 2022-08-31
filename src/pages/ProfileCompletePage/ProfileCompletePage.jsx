@@ -21,7 +21,7 @@ const ProfileCompletePage = ({ user, setUser }) => {
         <h3>Congratulations your profile is 100% complete. </h3>
       </div>
       <div className="profileCompleteWrapperInside">
-        <form onSubmit={handleSubmit}><button type="submit" id="matchesBtn">View your matches</button></form>
+        <form onSubmit={handleSubmit}><button type="submit" id="matches-Btn">View your matches</button></form>
       </div>
     </div>
   )

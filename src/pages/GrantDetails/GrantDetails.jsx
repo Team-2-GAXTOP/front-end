@@ -39,11 +39,11 @@ const GrantDetails = ({ user, setUser }) => {
         <div className='container-info-div'>
           <div className='genInfo-div'>
             <h5>General Information</h5>
-            <p>{resultData[0].desc.substring(0, 1000) + "..."}</p>
+            <p id="grantDetails">{resultData[0].desc.substring(0, 1000) + "..."}</p>
           </div>
           <div className='applicationInfo-div'>
             <h5>Application Information</h5>
-            <p>This program funds projects that help expand high-speed internet access and use.
+            <p id="grantDetails">This program funds projects that help expand high-speed internet access and use.
               It supports infrastructure deployment, mapping, and adoption.
               This includes planning and capacity-building in state offices.
               And it supports outreach and coordination with local communities.
@@ -64,7 +64,7 @@ const GrantDetails = ({ user, setUser }) => {
               <li> How does this project account for climate change risks?</li>
               <li> Is this project sustainable, and can it provide a lasting solution for the community it serves?</li>
             </ul>
-            <p>
+            <p id="grantDetails">
               States and Territories will be required to offer a low-cost plan to all their subscribers. The details and rules around the low-cost plans will be part of each state or territory's proposal and will require approval.
             </p>
           </div>
@@ -113,7 +113,7 @@ const GrantDetails = ({ user, setUser }) => {
           </div>
           <div>
             Grantor Contact Information: 
-            <p>
+            <p id="grantDetails">
               If you are having difficulty accessing the full announcement electronically, please contact Chris Troy CTroy@ctroy.com
             </p>
           </div>
