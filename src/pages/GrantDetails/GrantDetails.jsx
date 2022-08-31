@@ -11,7 +11,7 @@ const GrantDetails = ({ user, setUser }) => {
   const [activeTab, setActiveTab] = useState('Overview')
   let url = `${window.location.pathname.toString()}`
   const idToDisplay = url.split('=')[1];
-
+  let [eligible, setEligible] = useState([]);
   const [resultData, setResultData] = useState([]);
 
   useEffect(function () {
@@ -22,7 +22,8 @@ const GrantDetails = ({ user, setUser }) => {
         .match({ id: idToDisplay })
       setBusy(false);
       setResultData(data);
-      console.log(data)
+      setEligible(resultData[0].eligible_applicants);
+      console.log(eligible)
     }
     getResultData();
   }, []);
@@ -75,7 +76,17 @@ const GrantDetails = ({ user, setUser }) => {
   const WhoCanApply = () => {
     return (
       <>
-        Who can apply
+        <div className='container-info-div'>
+          <h5>Eligible Applicants:</h5>
+
+          <div>
+            The following government entities may apply to this program:
+          </div>
+          <div>
+            {eligible}
+          </div>
+        </div>
+
       </>
     )
   }
@@ -91,7 +102,23 @@ const GrantDetails = ({ user, setUser }) => {
   const Resources = () => {
     return (
       <>
-        Resources
+        <div className='container-info-div'>
+          <div>
+            All applicants should carefully review and prepare their applications according to instructions in the ReConnect Program Application Guide and program resources.
+            This Application Guide and program resources can be found at https://www.usda.gov/reconnect/forms-and-resources.
+            Applications must be submitted through the RUS on-line application system available on the program web site at https://www.usda.gov/reconnect/.
+          </div>
+          <div>
+            <h5>A list of grant writers can be found at </h5> <button type="submit" id="matchesBtn">Grant Writer</button>
+          </div>
+          <div>
+            Grantor Contact Information: 
+            <p>
+              If you are having difficulty accessing the full announcement electronically, please contact Chris Troy CTroy@ctroy.com
+            </p>
+          </div>
+        </div>
+
       </>
     )
   }
