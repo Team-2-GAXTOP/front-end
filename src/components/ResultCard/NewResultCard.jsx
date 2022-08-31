@@ -1,10 +1,8 @@
 import DeadLine from "./images/deadline.svg"
 import './NewResultCard.css'
+import { Link } from 'react-router-dom'
 
 const NewResultCard = ({ isBusy, dataValue, user }) => {
-
-  console.log("busy", isBusy)
-  console.log(dataValue[0])
 
   return (
     
@@ -22,8 +20,9 @@ const NewResultCard = ({ isBusy, dataValue, user }) => {
                 <h3 style={{ textAlign: 'left', marginBlockStart: 'unset', marginBlockEnd: 'unset' }}>{dataValue.title}</h3>
                 <p style={{ textAlign: 'left' }}>{(dataValue.desc).substring(0, 250)+"..."}</p>
         </div>
+
         <div className="newresultcardTopRight">
-          <button style={{marginBottom: "15px"}} className="btnResultsPage">View</button>
+        <Link to={`/grant-details/id=${dataValue.id}`}><button style={{marginBottom: "15px"}} className="btnResultsPage">View</button></Link>
           <button className="btnResultsPage">Save</button>
         </div>
 

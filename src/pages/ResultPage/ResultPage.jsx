@@ -9,6 +9,7 @@ import './ResultPage.styles.css'
 import ToggleSwitch from "../../components/toggleSwitch/toggleSwitch";
 
 
+
 const ResultPage = ({ user, setUser }) => {
   const navigate = useNavigate();
   

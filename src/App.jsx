@@ -40,6 +40,7 @@ const App = () => {
         <Route path='/' element={<NewLandingPage user={user} setUser={setUser}/> }/>
         <Route path='/account' element={<Account user={user} setUser={setUser}/>} />
         <Route path='/results' element={<ResultPage user={user} setUser={setUser}/>} />
+        <Route path="/grant-details/*" element={<GrantDetails user={user} setUser={setUser} />} />
         {/* <Route path='/resources' element={<ResourcesPage />} /> */}
         </Routes>
         <NewFooter/>
@@ -57,8 +58,9 @@ const App = () => {
               <Route path="/signup" element={ <SignupForm user={user} setUser={setUser} /> } />
               <Route path="/login" element={<LoginForm user={user} setUser={setUser} />} />
               <Route path="/login-back" element={ <LoginBackForm user={user} setUser={setUser} /> } />
-              <Route path="/grant-details" element={<GrantDetails user={user} setUser={setUser} />} />
+              <Route path="/grant-details/*" element={<GrantDetails user={user} setUser={setUser} />} />
               <Route path='/onboarding' element={<OnboardingPage user={user} setUser={setUser}/>} />
+              <Route path='/results' element={<ResultPage user={user} setUser={setUser}/>} />
           </Routes>
           </main>
           <NewFooter/>
