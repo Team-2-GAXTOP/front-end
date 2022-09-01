@@ -1,6 +1,6 @@
 import OnboardingStepForm from "../OnboardingStepForm/OnboardingStepForm"
 import { useState } from "react"
-
+import './OnboardingPage.css'
 
 const OnboardingPage = ({ user, setUser }) => {
 
@@ -19,11 +19,22 @@ const OnboardingPage = ({ user, setUser }) => {
   }
 
   return (
-    <div className="wrapperPage">
-      <OnboardingStepForm nextStep={nextStep} prevStep={prevStep} step={step}  user ={user} setUSer={setUser}  />
-      {/* <div className="paginationOnboarding">
-        <p>Question {step} of 5</p>
-      </div> */}
+    <div className="wrapperPager">
+      <OnboardingStepForm nextStep={nextStep} prevStep={prevStep} step={step} user={user} setUSer={setUser} />
+      
+      {/* place buttons here */}
+      {step === 7 || step <= 0 ? '' :
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '60%' }}>
+          <button className={step <= 1 ? 'leftBtnnHide' : 'leftBtnn'} onClick={prevStep}>Prev</button>
+  
+          <p className="paginationQ" style={{ marginBlockStart: '0', marginBlockEnd: '0' }}>Question {step} of 6</p>
+      
+          
+          {step === 6 ? <button className="rightBtn" onClick={nextStep}>Submit</button> : <button className="rightBtn" onClick={nextStep}>Next</button>}
+          
+        
+        </div>
+      }
     </div> 
   )
 }

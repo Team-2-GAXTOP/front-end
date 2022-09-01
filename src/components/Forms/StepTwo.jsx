@@ -19,41 +19,59 @@ const StepTwo = ({ nextStep, handleFormData, prevStep, values, user, setUser }) 
           <div style={{ display: "flex", justifyContent: "center", flexDirection: 'column', alignItems: "center" }}>
             
             <h3>2. Are you applying as</h3>
-            <div>
-              <input 
-                type="radio"
-                value="Individual"
-                name="applyingAs"  
-                onChange={handleFormData("applyingAs")}    
-              />
-              <label htmlFor="applyingAs">An Individual</label><br />
-              <input 
-                type="radio"
-                value="Organization"
-                name="applyingAs"  
-                onChange={handleFormData("applyingAs")}     
-              />
-              <label htmlFor="applyingAs">An Organization</label><br />
-              <input 
-                type="radio"
-                value="Government"
-                name="applyingAs"  
-                onChange={handleFormData("applyingAs")}     
-              />
-              <label htmlFor="applyingAs">A Government Agency</label><br />
-              <input 
-                type="radio"
-                value="Education"
-                name="applyingAs"  
-                onChange={handleFormData("applyingAs")}     
-              />
-              <label htmlFor="applyingAs">An Educational Institution</label><br />
-                  
+            <div style={{width: '50%', display: 'flex', flexDirection: 'column', justifyContent: 'start', alignItems: 'start'}}>
+              
+            <div></div>
+              <div>
+                <input 
+                  type="radio"
+                  value="Individual"
+                  name="applyingAs"  
+                  onChange={handleFormData("applyingAs")}    
+                />
+                <label htmlFor="applyingAs">An Individual</label>
+              </div>
+
+              <div>
+                <input 
+                  type="radio"
+                  value="Organization"
+                  name="applyingAs"  
+                  onChange={handleFormData("applyingAs")}     
+                />
+                <label htmlFor="applyingAs">An Organization</label>
+              </div>  
+
+              <div>
+                <input 
+                  type="radio"
+                  value="Government"
+                  name="applyingAs"  
+                  onChange={handleFormData("applyingAs")}     
+                />
+                <label htmlFor="applyingAs">A Government Agency</label>
+              </div>
+              
+              <div>
+                <input 
+                  type="radio"
+                  value="Education"
+                  name="applyingAs"  
+                  onChange={handleFormData("applyingAs")}     
+                />
+                <label htmlFor="applyingAs">An Educational Institution</label>
+              </div>
+
+              <br />    
               <br />
+
+              {/* from here */}
+
+              {values.applyingAs === 'Organization' && <div>
               <p><b>*</b> if you are from an organisation</p>
           
               <div style={{display: 'flex', flexDirection: "column"}}>
-                <label htmlFor="orgName">Organization name:</label>
+                <label style={{textAlign: 'start'}} htmlFor="orgName">Organization name:</label>
                 <input
                   value={values.orgName}
                   onChange={handleFormData("orgName")}    
@@ -64,7 +82,7 @@ const StepTwo = ({ nextStep, handleFormData, prevStep, values, user, setUser }) 
               </div>
                   
               <div style={{display: 'flex', flexDirection: "column"}}>
-                <label htmlFor="address">Address:</label>
+                <label style={{textAlign: 'start', marginTop: '10px'}} htmlFor="address">Address:</label>
                 <input
                   value={values.address}
                   onChange={handleFormData("address")}    
@@ -75,7 +93,7 @@ const StepTwo = ({ nextStep, handleFormData, prevStep, values, user, setUser }) 
               </div>
 
               <div style={{display: 'flex', flexDirection: "column"}}>
-                <label htmlFor="size">Size:</label>
+                <label style={{textAlign: 'start', marginTop: '10px'}} htmlFor="size">Size:</label>
                 <input
                   // value={values.size}
                   onChange={handleFormData("size")}    
@@ -83,14 +101,18 @@ const StepTwo = ({ nextStep, handleFormData, prevStep, values, user, setUser }) 
                   name="size"
                   type="number"
                 />
-              </div>    
+                </div>
+                </div>
+              }
+              {/* to here */}
+
             </div>
-            <div className="leftBtnWrapper">
+            {/* <div className="leftBtnWrapper">
               <button className="leftBtnn" onClick={prevStep}>Prev</button>
             </div>
             <div className="rightBtnWrapper">
               <input className="rightBtn" type="submit" value="Next" /> 
-            </div>
+            </div> */}
           </div>
         </form>
       </div>

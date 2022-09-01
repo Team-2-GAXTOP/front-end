@@ -11,7 +11,7 @@ const StepThree = ({ nextStep, handleFormData, prevStep, values, user, setUser  
 
   return (
     <>
-      <div initial={{ x: "20%" }} animate={{ x: "calc(100vw - 100%)" }} className="mainWrapper">
+      <div className="mainWrapper">
         <form
           onSubmit={submitFormData}
           style={{width: '35%'}}>   
@@ -35,12 +35,12 @@ const StepThree = ({ nextStep, handleFormData, prevStep, values, user, setUser  
                 <label htmlFor="prevApplied">No</label><br />    
             </div>
 
-            <div className="leftBtnWrapper">
+            {/* <div className="leftBtnWrapper">
               <button className="leftBtnn" onClick={prevStep}>Prev</button>
             </div>
             <div className="rightBtnWrapper">
               <input className="rightBtn" type="submit" value="Next" /> 
-            </div>
+            </div> */}
           </div>
         </form>
       </div>
