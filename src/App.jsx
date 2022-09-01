@@ -28,7 +28,6 @@ import NewLandingPage from './pages/LandingPage/NewLandingPage';
 const App = () => {
 
   const [user, setUser] = useState(getUser());
-  console.log(user)
   return (
     <>
       {user ?

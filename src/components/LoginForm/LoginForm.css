@@ -6,6 +6,8 @@
 }
 
 #signup-btn , #signin-btn {
+  display: flex;
+  align-content: center;
   background-color: white; 
   border: none;
   border-radius: 7px;

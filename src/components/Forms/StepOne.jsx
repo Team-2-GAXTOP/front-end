@@ -2,6 +2,8 @@ import { motion } from "framer-motion"
 import { useState, useEffect } from "react"
 import './Form.styles.css'
 
+
+
 const StepOne = ({ nextStep, handleFormData, values, user, setUser }) => {
 
   // const [error, setError] = useState(false)
@@ -17,28 +19,29 @@ const StepOne = ({ nextStep, handleFormData, values, user, setUser }) => {
   }
 
   return (
-    <div initial={{ x: "20%" }} animate={{ x: "calc(100vw - 100%)" }} className="mainWrapper">
+    <div className="mainWrapper">
       <form
         onSubmit={submitFormData}
         style={{ width: '35%' }}
       >
-        <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start", alignItems: "center", position: "relative" }}>
+        <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start", alignItems: "center", position: "relative", bottom: "10px" }}>
           <h3>Which state are you in?</h3>
           <div>
             <select htmlFor="zipcode" 
               value={selected}
               name="zipcode"
               onChange={e => { setSelected(e.target.value); }}>
+            
               {options.map((value) => (
-                <option value={value} key={value}>
+                <option className="optionO" value={value} key={value}>
                   {value}
                 </option>
               ))}
             </select>
           </div>
-          <div className="rightBtnWrapper">
+          {/* <div className="rightBtnWrapper">
             <input className="rightBtn" type="submit" value="Next" />
-          </div>
+          </div> */}
         </div>
       </form>
     </div>

@@ -19,7 +19,7 @@ const SignUpStep = ({ values, user, setUser }) => {
     { isBusy ?
     <>
     <div className='signup-main-div'>
-      <h3>Please make an account to save your answers!</h3>
+      <h3 style={{marginBottom: "60px"}}>Please make an account to save your answers!</h3>
         <div className='signup-div'>
           <button type="button" id="signup-btn" onClick={goToSignUp}>Sign up for free</button>
         </div>

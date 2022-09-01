@@ -45,7 +45,7 @@ const StepFive = ({ nextStep, handleFormData, prevStep, values , user, setUser})
               <label htmlFor="grantAmount">$30,000</label><br />  
 
               <br />
-              <p>Or enter amount</p>
+              <p style={{marginBlockEnd: '0'}}>Or enter amount</p>
               <div style={{display: 'flex', flexDirection: "column"}}>
                 <label htmlFor="grantAmount" />
                 <input
@@ -57,12 +57,12 @@ const StepFive = ({ nextStep, handleFormData, prevStep, values , user, setUser})
               </div>    
             </div>
 
-            <div className="leftBtnWrapper">
+            {/* <div className="leftBtnWrapper">
               <button className="leftBtnn" onClick={prevStep}>Prev</button>
             </div>
             <div className="rightBtnWrapper">
               <input className="rightBtn" type="submit" value="Next" /> 
-            </div> 
+            </div>  */}
           </div>
         </form>
       </div>
