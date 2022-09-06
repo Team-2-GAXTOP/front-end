@@ -12,7 +12,7 @@ const NewFooter = () => {
     <div className='footerWrapper'>
       <div>
         <Link className='resourcesBtn' style={{ marginRight: "35px" }} to="/resources">Resources</Link>
-        <Link className='resourcesBtn' style={{ marginRight: "35px" }} to="/contact">Contact</Link>
+        <Link className='resourcesBtn' style={{ marginRight: "35px" }} to="/contact-us">Contact</Link>
       </div>
 
       <div>

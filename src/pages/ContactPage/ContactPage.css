@@ -1,0 +1,46 @@
+.contact-main-div {
+    /* display: grid; */
+    justify-content: space-around;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    height: 150vh;
+    width: 100vw
+}
+
+#contact-label{
+    display: block;
+    font-size: small;
+}
+
+#design-div {
+    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#enginneer-div{
+    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#data-div{
+    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#manager-div{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+
+

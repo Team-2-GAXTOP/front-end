@@ -24,6 +24,7 @@ import NewFooter from './components/Footer/NewFooter';
 
 import GrantDetails from './pages/GrantDetails/GrantDetails';
 import NewLandingPage from './pages/LandingPage/NewLandingPage';
+import ContactPage from './pages/ContactPage/ContactPage';
 
 const App = () => {
 
@@ -34,14 +35,16 @@ const App = () => {
         <>
           {/* <NavBar user={user} setUser={setUser} /> */}
         <NewNavbar user={user} setUser={setUser} />
+        <main className="App">
         <Routes>
         <Route path='/profile-complete' element={<ProfileCompletePage user={user} setUser={setUser}/> }/>
         <Route path='/' element={<NewLandingPage user={user} setUser={setUser}/> }/>
         <Route path='/account' element={<Account user={user} setUser={setUser}/>} />
         <Route path='/results' element={<ResultPage user={user} setUser={setUser}/>} />
         <Route path="/grant-details/*" element={<GrantDetails user={user} setUser={setUser} />} />
-        {/* <Route path='/resources' element={<ResourcesPage />} /> */}
+        <Route path='/contact-us' element={<ContactPage user={user} setUser={setUser}/>} />
         </Routes>
+        </main>
         <NewFooter/>
 
         </>
@@ -60,6 +63,7 @@ const App = () => {
               <Route path="/grant-details/*" element={<GrantDetails user={user} setUser={setUser} />} />
               <Route path='/onboarding' element={<OnboardingPage user={user} setUser={setUser}/>} />
               <Route path='/results' element={<ResultPage user={user} setUser={setUser}/>} />
+              <Route path='/contact-us' element={<ContactPage user={user} setUser={setUser}/>} />
           </Routes>
           </main>
           <NewFooter/>
