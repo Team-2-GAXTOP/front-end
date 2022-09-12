@@ -11,7 +11,7 @@ const GrantDetails = ({ user, setUser }) => {
   const [activeTab, setActiveTab] = useState('Overview')
   let url = `${window.location.pathname.toString()}`
   const idToDisplay = url.split('=')[1];
-  let [eligible, setEligible] = useState([]);
+  let [eligible, setEligible] = useState("");
   const [resultData, setResultData] = useState([]);
 
   useEffect(function () {
@@ -22,8 +22,6 @@ const GrantDetails = ({ user, setUser }) => {
         .match({ id: idToDisplay })
       setBusy(false);
       setResultData(data);
-      setEligible(resultData[0].eligible_applicants);
-      console.log(eligible)
     }
     getResultData();
   }, []);
@@ -31,6 +29,35 @@ const GrantDetails = ({ user, setUser }) => {
 
   const handleTabChange = (e) => {
     setActiveTab(e.target.innerText)
+  }
+
+  const appliedGrant = async () => {
+    let grantId = resultData[0].id;
+    const { data, error } = await supabase
+      .from('user_grants')
+      .insert([{ grantID:grantId, applied: true, userID: user.id }])
+
+    if (error) {
+      const { data, error } = await supabase
+    .from('user_grants')
+    .update([{ applied: true, }])
+    .match({  grantID:grantId,  userID: user.id })
+    } 
+  }
+
+  const savedGrant = async () => {
+    let grantId = resultData[0].id;
+    const { data, error } = await supabase
+      .from('user_grants')
+      .insert([{ grantID:grantId, saved: true, userID: user.id }])
+
+      if (error) {
+        const { data, error } = await supabase
+      .from('user_grants')
+      .update([{ saved: true, }])
+      .match({  grantID:grantId,  userID: user.id })
+      
+      } 
   }
 
   const Overview = () => {
@@ -82,8 +109,9 @@ const GrantDetails = ({ user, setUser }) => {
           <div>
             The following government entities may apply to this program:
           </div>
+          <br/>
           <div>
-            {eligible}
+            {resultData[0].eligible_applicants}
           </div>
         </div>
 
@@ -94,7 +122,12 @@ const GrantDetails = ({ user, setUser }) => {
   const Timeline = () => {
     return (
       <>
-        Timeline
+         <div className='container-info-div'>
+          <h5>Application Timeline:</h5>
+          <div>
+            {resultData[0].close_date} - Application due date.
+          </div>
+        </div>
       </>
     )
   }
@@ -147,9 +180,9 @@ const GrantDetails = ({ user, setUser }) => {
               </div>
 
               <div className='grantButtons'>
-                <a href={resultData[0].url} target='_blank' textDecoration = 'none' className='grantBtn'> <button className='grantBtn'>Apply</button></a>
-                <button className='grantBtn'>Save</button>
-                <button className='grantBtn'>Send</button>
+                <a href={resultData[0].url} target='_blank' textDecoration = 'none' className='grantBtn'> <button className='grantBtn' onClick={appliedGrant}>Apply</button></a>
+                <button className='grantBtn' onClick={savedGrant}>Save</button>
+                <button className='grantBtn'>Share</button>
               </div>
             </div>
 

@@ -109,7 +109,7 @@ const SignupForm = ({  handleFormData, values, user1, setUser1 }) => {
         />
       </div>
       <div className="sign-up-input-container">
-        <div className="nameHolder"> <label>*Password</label> </div>
+        <div className="nameHolder"> <label>*Password (6 characters long)</label> </div>
         <input
           required
           type="password"
@@ -123,7 +123,7 @@ const SignupForm = ({  handleFormData, values, user1, setUser1 }) => {
         />
       </div>
       <div className="sign-up-input-container">
-        <div className="nameHolder"> <label>*Confirm Password</label> </div>
+        <div className="nameHolder"> <label>*Confirm Password (6 characters long)</label> </div>
         <input
           required
           type="password"

@@ -13,15 +13,15 @@ const StepOne = ({ nextStep, handleFormData, values, user, setUser }) => {
 
   const submitFormData = (e) => {
     e.preventDefault()
-    values.zipcode=selected
+    values.zipcode=e.target.value
     handleFormData("zipcode") 
-    nextStep()
+   // nextStep()
   }
 
   return (
     <div className="mainWrapper">
       <form
-        onSubmit={submitFormData}
+        onChange={submitFormData}
         style={{ width: '35%' }}
       >
         <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start", alignItems: "center", position: "relative", bottom: "10px" }}>
@@ -30,7 +30,7 @@ const StepOne = ({ nextStep, handleFormData, values, user, setUser }) => {
             <select htmlFor="zipcode" 
               value={selected}
               name="zipcode"
-              onChange={e => { setSelected(e.target.value); }}>
+              onChange={e => { setSelected(e.target.value);  }} >
             
               {options.map((value) => (
                 <option className="optionO" value={value} key={value}>

@@ -1,6 +1,14 @@
 import './TopMatchesCard.styles.css'
+import { Link } from 'react-router-dom'
+import { useState , useEffect} from "react"
+import {supabase} from "../../utils/supabase";
 
-const TopMatchesCard = ({ defaultStateCard, imageIcon, grantCardText }) => {
+
+
+const TopMatchesCard = ({  defaultStateCard, imageIcon, grantCardText, isBusy, data, user  }) => {
+  const [isBusyHere, setBusyHere] = useState(true)
+ 
+
   return (
     
       <div className={!defaultStateCard ? "topMatchesCard" : "topMatchesCardDashed"}>
@@ -12,13 +20,13 @@ const TopMatchesCard = ({ defaultStateCard, imageIcon, grantCardText }) => {
                 <img className="placeholderImg" src="placeholderImg.png" alt="place holder image" />
             
                 <div>
-                  <h4 style={{marginBlockStart: "0"}}>Org name</h4>
-                  <p>type of grant</p>
+                  <h4 style={{marginBlockStart: "0"}}>{data.title}</h4>
+                  <p className='postedWord'>{data.opp_type}</p>
                 </div>
 
               </div>
 
-              <button className='btn viewBtn'>View</button>
+              <Link to={`/grant-details/id=${data.id}`}><button className='btn viewBtn'>View</button></Link>
             </>
           :
           <>

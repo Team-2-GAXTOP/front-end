@@ -29,7 +29,7 @@ const StepSix = ({ nextStep, handleFormData, prevStep, values , user, setUser}) 
                   onChange={handleFormData("grantSource")}    
                 />
                 <label htmlFor="grantSource">To build infrastructure</label>
-              </div>
+              </div><br/>
 
               <div>
                 <input 
@@ -39,7 +39,7 @@ const StepSix = ({ nextStep, handleFormData, prevStep, values , user, setUser}) 
                   onChange={handleFormData("grantSource")} 
                 />
                 <label htmlFor="grantSource">Home installment</label>
-              </div> 
+              </div> <br/>
               
               <div>
                 <input 
@@ -49,6 +49,16 @@ const StepSix = ({ nextStep, handleFormData, prevStep, values , user, setUser}) 
                   onChange={handleFormData("grantSource")} 
                 />
                 <label htmlFor="grantSource">Pay for internet provider</label>
+              </div><br/>
+
+              <div>
+                <input 
+                  type="radio"
+                  value="usage"
+                  name="grantSource"  
+                  onChange={handleFormData("grantSource")} 
+                />
+                <label htmlFor="grantSource">To drive usage</label>
               </div>
                 
             </div>

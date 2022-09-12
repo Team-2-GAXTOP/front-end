@@ -34,6 +34,7 @@ const ResultPage = ({ user, setUser }) => {
       .select('*')
       .in('state', [zipcode, 'All'])
       .ilike('tags', '%'+role+'%')
+      .order('opp_type', { ascending: false })
       console.log(data);
         setBusy(false);
         setResultData(data);

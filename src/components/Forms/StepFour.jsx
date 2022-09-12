@@ -18,7 +18,7 @@ const StepFour = ({  nextStep, handleFormData, prevStep, values, user, setUser }
           <div style={{ display: "flex", justifyContent: "center", flexDirection: 'column', alignItems: "center" }}>
             
           <h3>4. Do you have a dedicated team of writers?</h3>
-          <div>
+          <div >
             <input 
                 type="radio"
                 value="yes"

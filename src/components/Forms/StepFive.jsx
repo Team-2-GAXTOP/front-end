@@ -20,41 +20,31 @@ const StepFive = ({ nextStep, handleFormData, prevStep, values , user, setUser})
           
           <div style={{ display: "flex", justifyContent: "center", flexDirection: 'column', alignItems: "center" }}>
             
-          <h3>5. What grant amount are you looking for?</h3>
-            <div>
-              <input 
+          <h3>5. How much is your annual budget?</h3>
+            <div style={{width: '55%', display: 'flex', flexDirection: 'column', justifyContent: 'start', alignItems: 'start' }}>
+            <div><input 
                 type="radio"
-                value="$10,000"
+                value="Less than $50,000"
                 name="grantAmount"  
                 onChange={handleFormData("grantAmount")}    
               />
-              <label htmlFor="grantAmount">$10,000</label><br />
-              <input 
+              <label htmlFor="grantAmount">Less than $50,000</label></div><br />
+              <div><input 
                 type="radio"
-                value="$20,000"
+                value="$51,000 - $99,000"
                 name="grantAmount"  
                 onChange={handleFormData("grantAmount")} 
               />
-              <label htmlFor="grantAmount">$20,000</label><br />   
-              <input 
+              <label htmlFor="grantAmount">$51,000 - $99,000</label></div><br />   
+              <div><input 
                 type="radio"
-                value="$30,000"
+                value="Greater than $100,000"
                 name="grantAmount"  
                 onChange={handleFormData("grantAmount")} 
               />
-              <label htmlFor="grantAmount">$30,000</label><br />  
+              <label htmlFor="grantAmount">Greater than $100,000</label></div><br />  
 
-              <br />
-              <p style={{marginBlockEnd: '0'}}>Or enter amount</p>
-              <div style={{display: 'flex', flexDirection: "column"}}>
-                <label htmlFor="grantAmount" />
-                <input
-                  value={values.grantAmount}
-                  onChange={handleFormData("grantAmount")}
-                  name="grantAmount"
-                  type="number"
-                />
-              </div>    
+              <br />  
             </div>
 
             {/* <div className="leftBtnWrapper">

@@ -16,12 +16,11 @@ const StepTwo = ({ nextStep, handleFormData, prevStep, values, user, setUser }) 
           onSubmit={submitFormData}
           style={{width: '35%'}}>   
           
-          <div style={{ display: "flex", justifyContent: "center", flexDirection: 'column', alignItems: "center" }}>
+          <div style={{  display: "flex", justifyContent: "center", flexDirection: 'column', alignItems: "center" }}>
             
             <h3>2. Are you applying as</h3>
-            <div style={{width: '50%', display: 'flex', flexDirection: 'column', justifyContent: 'start', alignItems: 'start'}}>
+            <div style={{paddingLeft: '50px', display: 'flex', flexDirection: 'column', justifyContent: 'start', alignItems: 'start' }}>
               
-            <div></div>
               <div>
                 <input 
                   type="radio"
@@ -60,6 +59,16 @@ const StepTwo = ({ nextStep, handleFormData, prevStep, values, user, setUser }) 
                   onChange={handleFormData("applyingAs")}     
                 />
                 <label htmlFor="applyingAs">An Educational Institution</label>
+              </div>
+
+              <div>
+                <input 
+                  type="radio"
+                  value="Tribe"
+                  name="applyingAs"  
+                  onChange={handleFormData("applyingAs")}     
+                />
+                <label htmlFor="applyingAs">A Federally Recognised Tribe</label>
               </div>
 
               <br />    

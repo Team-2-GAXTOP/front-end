@@ -41,7 +41,7 @@
 
 .sectionOneRightSideBackground {
   position: absolute;
-  bottom: 38%;
+  /* bottom: 38%; */
   z-index: 1;
   width: 36rem;
   height: 400px;
@@ -103,7 +103,7 @@
 }
 
 .sectionThree {
-  height: 60vh;
+  height: 80vh;
   width: 100vw;
   padding: 50px 0;
 }
